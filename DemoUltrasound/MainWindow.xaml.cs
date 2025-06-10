@@ -330,6 +330,47 @@ namespace DemoUltrasound
         
         //TODO-CWT
         
+        /// <summary>
+        /// Convierte imageData.m_C_Imagedata (int[]) a float[,] normalizado [0..1].
+        /// </summary>
+        ///Si tu C-mode viene en dos canales I/Q (m_C_I_Imagedata, m_C_Q_Imagedata), sustituye el bucle anterior por:
+
+        /*csharp
+            Copiar
+        float i = Iraw[y*width+x], q = Qraw[y*width+x];
+        img[y,x] = i*i + q*q;*/
+        /// 
+        private float[,] ConvertCModePowerToFloat2D()
+        {
+            int width  = _demoServer.GetImageWidthPixels();
+            int height = _demoServer.GetImageHeightPixels();
+            int[] raw  = imageData.m_C_Imagedata;
+
+            if (raw == null || raw.Length < width*height)
+                return null;
+
+            // 1) Copiar a arma. 2D
+            float[,] img = new float[height, width];
+            for (int y = 0; y < height; y++)
+            for (int x = 0; x < width; x++)
+                img[y,x] = raw[y*width + x];
+
+            // 2) Opcional: normalizar a [0..1] para estabilidad numérica
+            float min= float.MaxValue, max=float.MinValue;
+            foreach (var v in img)
+            {
+                if (v<min) min=v;
+                if (v>max) max=v;
+            }
+            float range = max-min;
+            if (range < 1e-3f) range = 1f;
+            for (int y = 0; y < height; y++)
+            for (int x = 0; x < width; x++)
+                img[y,x] = (img[y,x] - min)/range;
+
+            return img;
+        }
+        
         private float[,] ConvertBModeToFloat2D()
         {
             // 1) Obtener dimensiones actuales de la imagen desde el SDK
@@ -4164,17 +4205,26 @@ namespace DemoUltrasound
                 int height = _demoServer.GetImageHeightPixels();
                 MessageBox.Show($"Paso 2: Dimensiones obtenidas → width={width}, height={height}", "Debug CWT");
                 // 2) Genera el phantom
-                MessageBox.Show("Paso 3: Generando el phantom en memoria...", "Debug CWT");
-                float[,] sonoImage = GenerarPhantom(width, height);
-                MessageBox.Show("Paso 4: Phantom generado correctamente.", "Debug CWT");
+                //MessageBox.Show("Paso 3: Generando el phantom en memoria...", "Debug CWT");
+                //float[,] sonoImage = GenerarPhantom(width, height);
+                MessageBox.Show("Paso 3: Obteniendo imagen C-mode desde SDK...", "Debug CWT");
+                float[,] sonoImage = ConvertCModePowerToFloat2D();
+                if (sonoImage == null)
+                {
+                    MessageBox.Show("No hay imagen C-mode disponible. Haz Freeze primero.", "Error CWT");
+                    tg.IsChecked = false;
+                    return;
+                }
+                MessageBox.Show("Paso 4: Imagen C-mode cargada.", "Debug CWT");
+                //MessageBox.Show("Paso 4: Phantom generado correctamente.", "Debug CWT");
                 // 2.a) Convertir y guardar el phantom en disco
                 WriteableBitmap phantomBmp = CreateGrayscaleBitmapFromFloat2D(sonoImage);
                 string phantomPath = System.IO.Path.Combine(
                     Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
-                    "phantom_CWT.png"
+                    "CWT_C_MODE.png"
                 );
                 SaveWriteableBitmapAsPng(phantomBmp, phantomPath);
-                MessageBox.Show($"[Debug] Phantom guardado en:\n{phantomPath}", "Debug CWT");
+                MessageBox.Show($"[Debug] IMAGEN guardado en:\n{phantomPath}", "Debug CWT");
                 // 3) Lee parámetros
                 double sigma  = CWT_Depth.Value;
                 double omega0 = CWT_Gain.Value;
