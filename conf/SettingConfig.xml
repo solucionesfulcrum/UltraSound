@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<SettingConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0">
+  <DepthMarksShowConfigArray>
+    <DepthMarksShowConfig>
+      <MinDepth>0</MinDepth>
+      <MaxDepth>8</MaxDepth>
+      <PrimaryDepthStep>1</PrimaryDepthStep>
+      <SecondaryDepthStep>0.5</SecondaryDepthStep>
+    </DepthMarksShowConfig>
+    <DepthMarksShowConfig>
+      <MinDepth>8</MinDepth>
+      <MaxDepth>16</MaxDepth>
+      <PrimaryDepthStep>2</PrimaryDepthStep>
+      <SecondaryDepthStep>1</SecondaryDepthStep>
+    </DepthMarksShowConfig>
+    <DepthMarksShowConfig>
+      <MinDepth>16</MinDepth>
+      <MaxDepth>24</MaxDepth>
+      <PrimaryDepthStep>5</PrimaryDepthStep>
+      <SecondaryDepthStep>1</SecondaryDepthStep>
+    </DepthMarksShowConfig>
+  </DepthMarksShowConfigArray>
+  <DepthTextShowConfigArray>
+   <DepthTextShowConfig>
+     <MinDepth>0</MinDepth>
+     <MaxDepth>2</MaxDepth>
+     <ShowDepthStep>0.5</ShowDepthStep>
+   </DepthTextShowConfig>
+   <DepthTextShowConfig>
+     <MinDepth>2</MinDepth>
+     <MaxDepth>5</MaxDepth>
+     <ShowDepthStep>1</ShowDepthStep>
+   </DepthTextShowConfig>
+   <DepthTextShowConfig>
+     <MinDepth>5</MinDepth>
+     <MaxDepth>10</MaxDepth>
+     <ShowDepthStep>2</ShowDepthStep>
+   </DepthTextShowConfig>
+   <DepthTextShowConfig>
+     <MinDepth>10</MinDepth>
+     <MaxDepth>24</MaxDepth>
+     <ShowDepthStep>5</ShowDepthStep>
+   </DepthTextShowConfig>
+  </DepthTextShowConfigArray>
+  
+</SettingConfig>

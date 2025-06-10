@@ -1,0 +1,716 @@
+﻿<Window x:Class="DemoUltrasound.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemoUltrasound"
+        mc:Ignorable="d" WindowState="Maximized"
+         WindowStyle="None" ResizeMode="NoResize"
+        Title="MainWindow" d:DesignHeight ="1080"  d:DesignWidth="1920" Background="Black"
+        Loaded="Window_Loaded" Unloaded="Window_Unloaded" Closing="Window_Closing">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
+        <SolidColorBrush x:Key="NomeButtonDefaulted" Color="#FF1987EA"/>
+        <SolidColorBrush x:Key="TitleAHelpForeground" Color="#FFC8C8C8"/>
+        <SolidColorBrush x:Key="UpdateForeground" Color="Red"/>
+
+        <Style TargetType="{x:Type GroupBox}">
+            <Setter Property="FontSize" Value="{Binding CurrentFontSize}" />
+            <Setter Property="Foreground" Value="#FF00A0A0" />
+            <Setter Property="Padding" Value="10" />
+        </Style>
+
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="MinWidth" Value="50" />
+            <Setter Property="Margin" Value="5,0,5,0" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="TextAlignment" Value="Right"/>
+            <Setter Property="FontSize" Value="{Binding CurrentFontSize}" />
+            <Setter Property="Foreground" Value="#FF00A0A0" />
+        </Style>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="Width" Value="300" />
+            <Setter Property="Margin" Value="5,0,5,0" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="{Binding CurrentFontSize}" />
+        </Style>
+        <Style TargetType="{x:Type ComboBox}">
+            <Setter Property="MinWidth" Value="150" />
+            <Setter Property="FontSize" Value="{Binding CurrentFontSize}" />
+        </Style>
+        <Style TargetType="{x:Type ComboBoxItem}">
+            <Setter Property="FontSize" Value="{Binding CurrentFontSize}" />
+        </Style>
+        <Style TargetType="{x:Type Slider}">
+            <Setter Property="MinWidth" Value="120" />
+            <Setter Property="FontSize" Value="{Binding CurrentFontSize}" />
+        </Style>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <ControlTemplate x:Key="ButtonBaseControlTemplate1" TargetType="{x:Type ButtonBase}">
+            <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="Button.IsDefaulted" Value="True">
+                    <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" TargetName="border" Value="#FF0070C0"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FF2C628B"/>
+                </Trigger>
+
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" TargetName="border" Value="#FFA9A9A9"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FFADB2B5"/>
+                    <Setter Property="Foreground" Value="#FF838383"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="{DynamicResource NomeButtonDefaulted}"/>
+            <Setter Property="Foreground" Value="{DynamicResource TitleAHelpForeground}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Width" Value="70" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="Template" Value="{DynamicResource ButtonBaseControlTemplate1}"/>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="ToggleButtonStyle1" TargetType="{x:Type ToggleButton}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{DynamicResource NomeButtonDefaulted}"/>
+            <Setter Property="Foreground" Value="{DynamicResource TitleAHelpForeground}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Button.IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#FF0070C0"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FF2C628B"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#FF0070C0"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FF2C628B"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="#FFA9A9A9"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FFADB2B5"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButtonStyle1}">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Width" Value="70" />
+        </Style>
+
+    </Window.Resources>
+    <Grid Background="#FF282850">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition Height="58"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="430"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="8"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="2*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <TextBlock FontSize="40" Grid.Column="0" Text="Demo v1.0" HorizontalAlignment="Left" Margin="40,10"/>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Left"  Margin="10,10">
+                <TextBlock FontSize="20"  Text="SDK Ver:" />
+                <TextBlock x:Name="SDKVersion" FontSize="20" Grid.Column="2"  Margin="5,0"/>
+                <TextBlock FontSize="20"  Text="HW Ver:" Margin="10,0"/>
+                <TextBlock x:Name="HardWareVersion" FontSize="20" Grid.Column="2"  Margin="5,0"/>
+            </StackPanel>
+
+            <Image x:Name="UsbConnState" Grid.Column="2" Stretch="UniformToFill" Height="50" Width="50"/>
+
+        </Grid>
+
+        <Grid Grid.Column="0" Grid.Row="1" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/> 
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Row="0"  HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="Auto"/>
+                        <RowDefinition  Height="Auto"/>
+                        <RowDefinition  Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Orientation="Horizontal"  Margin="0,5,0,5" >
+                        <TextBlock Text="sonda:" Margin="5"/>
+                        <ComboBox x:Name="UseProbeName"  Margin="5" SelectionChanged="UseProbeName_SelectionChanged">
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Orientation="Horizontal"  Margin="0,5,0,5" Visibility="Visible" >
+                        <TextBlock Text="Modo de examen:" Margin="5"/>
+                        <ComboBox x:Name="UseExameName"  Margin="5" SelectionChanged="UseExameName_SelectionChanged">
+                        </ComboBox>
+                    </StackPanel>
+                </Grid> 
+
+                <GroupBox Grid.Row="1" Header="Parámetros" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10,0,10,0">
+                    <TabControl x:Name="MainTabControl" Background="Transparent" TabStripPlacement="Top" >
+                        <TabItem Header="Parámetros B" >
+                            <ScrollViewer>
+                                <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Ganancia:" Margin="5"/>
+                                        <Slider x:Name="Gain"  Margin="5" Minimum="1" Maximum="100" Value="50"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft" ValueChanged="Gain_ValueChanged"  />
+                                        <TextBlock Text="{Binding ElementName=Gain,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Orientation="Horizontal"  Margin="0,5,0,5" >
+                                        <TextBlock Text="Profundidad:" Margin="5"/>
+                                        <Slider x:Name="Depth"  Margin="5"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft"  ValueChanged="Depth_ValueChanged"/>
+                                        <TextBlock x:Name="DepthValue" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="2" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Rango dinámico:" Margin="5"/>
+                                        <Slider x:Name="DynamicRange"  Margin="5" Minimum="1" Maximum="100" Value="50"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft" ValueChanged="DynamicRange_ValueChanged"  />
+                                        <TextBlock Text="{Binding ElementName=DynamicRange,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="3" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Mejora de imagen:" Margin="5"/>
+                                        <Slider x:Name="SRI"  Margin="5" Minimum="1" Maximum="8" Value="4"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft" ValueChanged="SRI_SelectionChanged"  />
+                                        <TextBlock Text="{Binding ElementName=SRI,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="4" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Correlación de cuadros:" Margin="5"/>
+                                        <Slider x:Name="Correlation"  Margin="5" Minimum="1" Maximum="4" Value="2"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft" ValueChanged="Correlation_SelectionChanged"  />
+                                        <TextBlock Text="{Binding ElementName=Correlation,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="5" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Nivel de gris:" Margin="5"/>
+                                        <Slider x:Name="GrayLevel"  Margin="5" Minimum="1" Maximum="8" Value="1"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft" ValueChanged="GrayLevel_SelectionChanged"  />
+                                        <TextBlock Text="{Binding ElementName=GrayLevel,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="6" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Pseudocolor:" Margin="5"/>
+                                        <Slider x:Name="PseudocolorLevel"  Margin="5" Minimum="0" Maximum="8" Value="0"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft" ValueChanged="PseudocolorLevel_SelectionChanged"  />
+                                        <TextBlock Text="{Binding ElementName=PseudocolorLevel,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="7" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Armónico:" Margin="5"/>
+                                        <ComboBox x:Name="Harmonic" Margin="5" SelectionChanged="Harmonic_SelectionChanged">
+                                            <ComboBoxItem Content="Apagado" IsSelected="True"/>
+                                            <ComboBoxItem Content="Encendido"/>
+                                        </ComboBox>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="8" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Área de enfoque:" Margin="5"/>
+                                        <ComboBox x:Name="FocusArea" Margin="5" SelectionChanged="FocusArea_SelectionChanged">
+                                            <ComboBoxItem Content="0cm" />
+                                            <ComboBoxItem Content="0cm"/>
+                                            <ComboBoxItem Content="0cm"/>
+                                            <ComboBoxItem Content="0cm" />
+                                            <ComboBoxItem Content="0cm"/>
+                                            <ComboBoxItem Content="0cm"/>
+                                            <ComboBoxItem Content="Área completa" IsSelected="True"/>
+                                        </ComboBox>
+                                        <TextBlock x:Name="FocusAreaNew" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="9" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Frecuencia:" Margin="5"/>
+                                        <ComboBox x:Name="Frequency" Margin="5" SelectionChanged="Frequency_SelectionChanged">
+                                            <ComboBoxItem Content="Frecuencia baja" IsSelected="True"/>
+                                            <ComboBoxItem Content="Frecuencia media"/>
+                                            <ComboBoxItem Content="Frecuencia alta"/>
+                                        </ComboBox>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="10" Orientation="Vertical" Margin="0,0,0,5">
+                                        <StackPanel Orientation="Horizontal"  Margin="0,0,0,5" >
+                                            <TextBlock Text="TGC1:" Margin="5"/>
+                                            <Slider x:Name="TGC1" Tag="TGC1"  Margin="5" Minimum="-15" Maximum="15" Value="0" TickPlacement="TopLeft" ValueChanged="TGC_ValueChanged"  />
+                                            <TextBlock Text="{Binding ElementName=TGC1,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal"  Margin="0,0,0,5" >
+                                            <TextBlock Text="TGC2:" Margin="5"/>
+                                            <Slider x:Name="TGC2" Tag="TGC2" Margin="5" Minimum="-15" Maximum="15" Value="0"  TickPlacement="TopLeft" ValueChanged="TGC_ValueChanged"  />
+                                            <TextBlock Text="{Binding ElementName=TGC2,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal"  Margin="0,0,0,5" >
+                                            <TextBlock Text="TGC3:" Margin="5"/>
+                                            <Slider x:Name="TGC3" Tag="TGC3"  Margin="5" Minimum="-15" Maximum="15" Value="0" TickPlacement="TopLeft" ValueChanged="TGC_ValueChanged"  />
+                                            <TextBlock Text="{Binding ElementName=TGC3,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal"  Margin="0,0,0,5" >
+                                            <TextBlock Text="TGC4:" Margin="5"/>
+                                            <Slider x:Name="TGC4" Tag="TGC4"  Margin="5" Minimum="-15" Maximum="15" Value="0" TickPlacement="TopLeft" ValueChanged="TGC_ValueChanged"  />
+                                            <TextBlock Text="{Binding ElementName=TGC4,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal"  Margin="0,0,0,5" >
+                                            <TextBlock Text="TGC5:" Margin="5"/>
+                                            <Slider x:Name="TGC5" Tag="TGC5"  Margin="5" Minimum="-15" Maximum="15" Value="0"  TickPlacement="TopLeft" ValueChanged="TGC_ValueChanged"  />
+                                            <TextBlock Text="{Binding ElementName=TGC5,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal"  Margin="0,0,0,5" >
+                                            <TextBlock Text="TGC6:" Margin="5"/>
+                                            <Slider x:Name="TGC6" Tag="TGC6"  Margin="5" Minimum="-15" Maximum="15" Value="0"  TickPlacement="TopLeft" ValueChanged="TGC_ValueChanged"  />
+                                            <TextBlock Text="{Binding ElementName=TGC6,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal"  Margin="0,0,0,5" >
+                                            <Button Content="TGC Automático" Width="Auto" x:Name="AutoTGC" Click="AutoTGC_Click"/>
+                                        </StackPanel>
+
+                                    </StackPanel>
+
+                                    <StackPanel Grid.Row="11" Orientation="Vertical"  Margin="0,0,0,5"  Visibility="{Binding NEVisibility}">
+                                        <StackPanel Orientation="Horizontal"  Margin="0,0,0,5" >
+                                            <TextBlock Text="Mejora de cuadros:" Margin="5"/>
+                                            <ComboBox x:Name="NEONOFF" Margin="5" SelectionChanged="NEONOFF_SelectionChanged">
+                                                <ComboBoxItem Content="Apagado" IsSelected="True"/>
+                                                <ComboBoxItem Content="Encendido"/>
+                                            </ComboBox>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal"  Margin="0,0,0,5" >
+                                            <TextBlock Text="Ángulo de mejora:" Margin="5"/>
+                                            <Slider x:Name="NeAngle"  Margin="5" Minimum="-30" Maximum="30" Value="30"  TickFrequency="15" IsSnapToTickEnabled="True" TickPlacement="TopLeft" ValueChanged="NeAngle_SelectionChanged"  />
+                                            <TextBlock Text="{Binding ElementName=NeAngle,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Grid>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem x:Name="TabItemC" Header="Parámetros C" >
+                            <ScrollViewer>
+                                <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Ganancia:" Margin="5"/>
+                                        <Slider x:Name="C_Gain"  Margin="5" Minimum="1" Maximum="100" Value="50"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft" ValueChanged="C_Gain_ValueChanged"  />
+                                        <TextBlock Text="{Binding ElementName=C_Gain,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Orientation="Horizontal"  Margin="0,5,0,5" >
+                                        <TextBlock Text="Filtrado de pared:" Margin="5"/>
+                                        <Slider x:Name="C_WF"  Margin="5" Minimum="0" Maximum="4" Value="0"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft"  ValueChanged="C_WF_ValueChanged"/>
+                                        <TextBlock Text="{Binding ElementName=C_WF,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="2" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Correlación de cuadros:" Margin="5"/>
+                                        <Slider x:Name="C_Correlation"  Margin="5" Minimum="0" Maximum="4" Value="0"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft" ValueChanged="C_Correlation_ValueChanged"  />
+                                        <TextBlock Text="{Binding ElementName=C_Correlation,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="3" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Velocidad del flujo:" Margin="5"/>
+                                        <Slider x:Name="C_Scale"  Margin="5" Minimum="0" Maximum="7" Value="0"   TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft"  ValueChanged="C_Scale_ValueChanged"/>
+                                        <TextBlock x:Name="C_ScaleValue" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel x:Name="C_Steer_StackPanel" Grid.Row="4" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Desviación:" Margin="5"/>
+                                        <Slider x:Name="C_Steer"  Margin="5" Minimum="-20" Maximum="20" Value="0"  TickFrequency="10" IsSnapToTickEnabled="True" TickPlacement="TopLeft" ValueChanged="C_Steer_ValueChanged"  />
+                                        <TextBlock Text="{Binding ElementName=C_Steer,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="5" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Prioridad:" Margin="5"/>
+                                        <Slider x:Name="C_Priority"  Margin="5" Minimum="0" Maximum="4" Value="0"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft"  ValueChanged="C_Priority_ValueChanged"/>
+                                        <TextBlock Text="{Binding ElementName=C_Priority,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="6" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Modo:" Margin="5"/>
+                                        <ComboBox x:Name="C_Mode" Margin="5" SelectionChanged="C_Mode_SelectionChanged">
+                                            <ComboBoxItem Content="Flujo sanguíneo" IsSelected="True"/>
+                                            <ComboBoxItem Content="Energía"/>
+                                        </ComboBox>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="7" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Mapeo:" Margin="5"/>
+                                        <Slider x:Name="C_Map"  Margin="5" Minimum="0" Maximum="11" Value="0"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft"  ValueChanged="C_Map_ValueChanged"/>
+                                        <TextBlock Text="{Binding ElementName=C_Map,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="8" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Frecuencia:" Margin="5"/>
+                                        <ComboBox x:Name="C_Speed" Margin="5" SelectionChanged="C_Speed_SelectionChanged">
+                                            <ComboBoxItem Content="Alta velocidad" IsSelected="True"/>
+                                            <ComboBoxItem Content="Baja velocidad"/>
+                                        </ComboBox>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="9" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Invertir:" Margin="5"/>
+                                        <ComboBox x:Name="C_Invert" Margin="5" SelectionChanged="C_Invert_SelectionChanged">
+                                            <ComboBoxItem Content="Apagado" IsSelected="True"/>
+                                            <ComboBoxItem Content="Encendido"/>
+                                        </ComboBox>
+                                    </StackPanel>
+                                </Grid>
+                            </ScrollViewer>
+                        </TabItem>
+                        
+                        <TabItem Header="Parámetros D" >
+                            <ScrollViewer>
+                                <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Ganancia:" Margin="5"/>
+                                        <Slider x:Name="D_Gain"  Margin="5" Minimum="-20" Maximum="20" Value="0"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft" ValueChanged="D_Gain_ValueChanged"  />
+                                        <TextBlock Text="{Binding ElementName=D_Gain,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Rango dinámico:" Margin="5"/>
+                                        <Slider x:Name="D_DynamicRange"  Margin="5" Minimum="20" Maximum="60" Value="40"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft" ValueChanged="D_DynamicRange_ValueChanged"  />
+                                        <TextBlock Text="{Binding ElementName=D_DynamicRange,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="2" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Velocidad del flujo:" Margin="5"/>
+                                        <Slider x:Name="D_Scale"  Margin="5" Minimum="0" Maximum="7" Value="0"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft"  ValueChanged="D_Scale_ValueChanged"/>
+                                        <TextBlock x:Name="D_ScaleValue" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="3" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Línea base:" Margin="5"/>
+                                        <Slider x:Name="D_BaseLine"  Margin="5"  Minimum="-3" Maximum="3" Value="0"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft"  ValueChanged="D_BaseLine_ValueChanged"/>
+                                        <TextBlock Text="{Binding ElementName=D_BaseLine,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="4" Orientation="Horizontal"  Margin="0,5,0,5" >
+                                        <TextBlock Text="Filtrado de pared:" Margin="5"/>
+                                        <Slider x:Name="D_WF"  Margin="5" Minimum="0" Maximum="2" Value="1"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft"  ValueChanged="D_WF_ValueChanged"/>
+                                        <TextBlock Text="{Binding ElementName=D_WF,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="5" Orientation="Horizontal"  Margin="0,5,0,5" >
+                                        <TextBlock Text="Ángulo:" Margin="5"/>
+                                        <Slider x:Name="D_Angle"  Margin="5" Minimum="-80" Maximum="80" Value="0"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft"  ValueChanged="D_Angle_ValueChanged"/>
+                                        <TextBlock Text="{Binding ElementName=D_Angle,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="6" Orientation="Horizontal"  Margin="0,5,0,5" >
+                                        <TextBlock Text="Tiempo por pantalla:" Margin="5"/>
+                                        <ComboBox x:Name="D_TimeScale" Margin="5" SelectionChanged="D_TimeScale_SelectionChanged">
+                                            <ComboBoxItem Content="4s" IsSelected="True"/>
+                                            <ComboBoxItem Content="6s"/>
+                                            <ComboBoxItem Content="8s"/>
+                                            <ComboBoxItem Content="1s"/>
+                                        </ComboBox>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="7" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Frecuencia:" Margin="5"/>
+                                        <ComboBox x:Name="D_Speed" Margin="5" SelectionChanged="D_Speed_SelectionChanged">
+                                            <ComboBoxItem Content="Alta velocidad" IsSelected="True"/>
+                                            <ComboBoxItem Content="Baja velocidad"/>
+                                        </ComboBox>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="8"  x:Name="D_Steer_StackPanel" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Desviación:" Margin="5"/>
+                                        <Slider x:Name="D_Steer"  Margin="5" Minimum="-20" Maximum="20" Value="0"  TickFrequency="10" IsSnapToTickEnabled="True" TickPlacement="TopLeft" ValueChanged="D_Steer_ValueChanged"  />
+                                        <TextBlock Text="{Binding ElementName=D_Steer,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="9" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Volumen de muestreo:" Margin="5"/>
+                                        <Slider x:Name="D_SamplingVolume"  Margin="5" Minimum="1" Maximum="10" Value="5"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft"  ValueChanged="D_SamplingVolume_ValueChanged"/>
+                                        <TextBlock Text="{Binding ElementName=D_SamplingVolume,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="10" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Invertir:" Margin="5"/>
+                                        <ComboBox x:Name="D_Invert" Margin="5" SelectionChanged="D_Invert_SelectionChanged">
+                                            <ComboBoxItem Content="Apagado" IsSelected="True"/>
+                                            <ComboBoxItem Content="Encendido"/>
+                                        </ComboBox>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="11" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Mapeo:" Margin="5"/>
+                                        <Slider x:Name="D_Map"  Margin="5" Minimum="1" Maximum="8" Value="1"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft"  ValueChanged="D_Map_ValueChanged"/>
+                                        <TextBlock Text="{Binding ElementName=D_Map,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="12" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Pseudocolor:" Margin="5"/>
+                                        <Slider x:Name="D_PseudocolorLevel"  Margin="5" Minimum="0" Maximum="8" Value="0"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft" ValueChanged="D_PseudocolorLevel_SelectionChanged"  />
+                                        <TextBlock Text="{Binding ElementName=D_PseudocolorLevel,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+
+                                </Grid>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Header="Parámetros M" >
+                            <ScrollViewer>
+                                <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                        <RowDefinition  Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Ganancia:" Margin="5"/>
+                                        <Slider x:Name="M_Gain"  Margin="5" Minimum="0" Maximum="100" Value="50"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft" ValueChanged="M_Gain_ValueChanged"  />
+                                        <TextBlock Text="{Binding ElementName=M_Gain,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+
+                                    <StackPanel Grid.Row="1" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Tiempo por pantalla:" Margin="5"/>
+                                        <ComboBox x:Name="M_TimeScale" Margin="5" SelectionChanged="M_TimeScale_SelectionChanged">
+                                            <ComboBoxItem Content="4s" IsSelected="True"/>
+                                            <ComboBoxItem Content="6s"/>
+                                            <ComboBoxItem Content="8s"/>
+                                            <ComboBoxItem Content="1s"/>
+                                        </ComboBox>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="2" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Mapeo:" Margin="5"/>
+                                        <Slider x:Name="M_Map"  Margin="5" Minimum="1" Maximum="8" Value="0"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft"  ValueChanged="M_Map_ValueChanged"/>
+                                        <TextBlock Text="{Binding ElementName=M_Map,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="3" Orientation="Horizontal"  Margin="0,0,0,5" >
+                                        <TextBlock Text="Pseudocolor:" Margin="5"/>
+                                        <Slider x:Name="M_PseudocolorLevel"  Margin="5" Minimum="0" Maximum="8" Value="0"  TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft" ValueChanged="M_PseudocolorLevel_SelectionChanged"  />
+                                        <TextBlock Text="{Binding ElementName=M_PseudocolorLevel,Path=Value}" TextAlignment="Left" Margin="5"/>
+                                    </StackPanel>
+                                </Grid>
+                            </ScrollViewer>
+                        </TabItem>
+                    </TabControl>
+
+                </GroupBox>
+                <GroupBox Grid.Row="2"
+                      Grid.Column="0"
+                      Header="Parámetros CWT"
+                      Margin="10,5,10,0"
+                      Visibility="{Binding IsChecked, ElementName=C, Converter={StaticResource BoolToVis}}">
+                    <ScrollViewer>
+                    <Grid Margin="0,10,0,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <!-- agrega más filas según cuántos controles CWT necesites -->
+                        </Grid.RowDefinitions>
+
+                        <!-- Ejemplo de controles CWT: -->
+                        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,5">
+                            <TextBlock Text="CWT_Depth:" Margin="5"/>
+                            <Slider x:Name="CWT_Depth" Margin="5" Minimum="0" Maximum="100" Value="50" TickFrequency="1" IsSnapToTickEnabled="True"
+                                    TickPlacement="TopLeft" ValueChanged="CWT_Depth_ValueChanged"/>
+                            <TextBlock Text="{Binding ElementName=CWT_Depth, Path=Value, StringFormat=N0}" Margin="5"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,5">
+                            <TextBlock Text="CWT_Gain:" Margin="5"/>
+                            <Slider x:Name="CWT_Gain" Margin="5" Minimum="0" Maximum="100" Value="50" TickFrequency="1" IsSnapToTickEnabled="True"
+                                    TickPlacement="TopLeft" ValueChanged="CWT_Gain_ValueChanged"/>
+                            <TextBlock Text="{Binding ElementName=CWT_Gain, Path=Value, StringFormat=N0}" Margin="5"/>
+                            <ProgressBar x:Name="CWTProgressBar"
+                                         Minimum="0" Maximum="100"
+                                         Height="20" Visibility="Collapsed"
+                                         Margin="0,8,0,0"/>
+                        </StackPanel>
+
+                        <!-- Añade aquí tantos controles (Sliders, ComboBoxes, etc.) como necesites para configurar CWT -->
+                    </Grid>
+                    </ScrollViewer>
+                </GroupBox>
+                
+
+                <Grid Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Width="70" Margin="5,5" x:Name="PWCtrl">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition />
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <ToggleButton x:Name="FreezeOrUnFreeze" Grid.Row="0"  Margin="0,0,0,5" IsChecked="True" Content="Descongelar"  Height="50" Click="FreezeOrUnFreeze_Click"/>
+                    <ToggleButton x:Name="VideoPlay" Grid.Row="1" Visibility="Collapsed"  Margin="0,0,0,5" Content="Reproducir"  Height="50" Click="VideoPlay_Click"/>
+                    <ToggleButton x:Name="B" Grid.Row="2" IsChecked="False" Margin="0,0,0,5" Content="B"  Height="50" Click="B_Click"/>
+                    <ToggleButton x:Name="C" Grid.Row="3" IsChecked="False" Margin="0,0,0,5" Content="C"  Height="50" Click="C_Click"/>
+                    <ToggleButton x:Name="D" Grid.Row="4" IsChecked="False" Margin="0,0,0,5" Content="D"  Height="50" Click="D_Click"/>
+                    <ToggleButton x:Name="M" Grid.Row="5" IsChecked="False" Margin="0,0,0,5" Content="M"  Height="50" Click="M_Click" />
+                    <ToggleButton x:Name="CWT" Grid.Row="6" IsChecked="False" Margin="0,0,0,5" Content="CWT"  Height="50" Click="CWT_Click" Visibility="{Binding IsChecked, ElementName=C, Converter={StaticResource BoolToVis}}"/>
+                    <ToggleButton x:Name="StartRecording" Grid.Row="7" IsChecked="False" Margin="0,0,0,5" Content="START"  Height="50" Click="StartRecording_Click" Visibility="Hidden"/>
+                    <ToggleButton x:Name="StopRecording" Grid.Row="8" IsChecked="False" Margin="0,0,0,5" Content="STOP"  Height="50" Click="StopRecording_Click" Visibility="Hidden"/>
+                    <ToggleButton x:Name="GenerarDatosSimulados" Grid.Row="9" IsChecked="False" Visibility="Collapsed" Margin="0,0,0,5" Content="Go"  Height="50" Click="StartEngineButton_Click"/>
+                    <Button x:Name="Update" Grid.Row="6"  Margin="0,0,0,5"  Height="50" Visibility="Collapsed" Click="Update_Click">
+                        <Button.Content>
+                            <Grid>
+                                <Grid.Resources>
+                                    <Style TargetType="{x:Type TextBlock}"/>
+                                </Grid.Resources>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock x:Name="Update_B_BC" Grid.Column="0" Text="B" FontSize="20" Foreground="{DynamicResource UpdateForeground}"/>
+                                <TextBlock Text="|" Grid.Column="1" Foreground="{DynamicResource TitleAHelpForeground}"/>
+                                <TextBlock x:Name="Update_D" Grid.Column="2" Text="D" FontSize="20"  Foreground="{DynamicResource TitleAHelpForeground}"/>
+                            </Grid>
+                        </Button.Content>
+                    </Button>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="ImageAreas" Grid.Column="2" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" ClipToBounds="True" Background="Transparent">
+                
+                <local:BC_Mode_UltraSound_Control x:Name="BAWBUtrs"
+                                                  BorderThickness="0"
+                                                  BorderBrush="Transparent"
+                                                  Background="Black"
+                                                  HorizontalAlignment="Stretch"
+                                                  VerticalAlignment="Stretch"/>
+
+                <Canvas x:Name="SelectionCanvas"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Width="{Binding ActualWidth, ElementName=BAWBUtrs}"
+                        Height="{Binding ActualHeight, ElementName=BAWBUtrs}"
+                        Background="Transparent">
+                    <!-- Rectángulo manipulable -->
+                    <Rectangle Name="SelectionRectangle" Stroke="Red" StrokeThickness="2" Width="200" Height="150"
+                       Canvas.Left="100" Canvas.Top="100"  Visibility="Collapsed" Fill="Transparent"/>
+
+                    <!-- Thumbs para manipular el rectángulo (movimiento y redimensión) -->
+                    <Thumb Name="MoveThumb" Width="20" Height="20" Background="Blue" Visibility="Collapsed" Canvas.Left="280" Canvas.Top="230"
+                   DragDelta="MoveThumb_DragDelta"/>
+                    <Thumb Name="ResizeThumb" Width="20" Height="20" Background="Green" Visibility="Collapsed" Canvas.Left="280" Canvas.Top="230"
+                   DragDelta="ResizeThumb_DragDelta"/>
+                    <Image x:Name="overlayImage"
+                           Source="Images/overlay.jpg"
+                           Opacity="0.5"
+                           Visibility="Collapsed"
+                           Stretch="Fill"
+                           Canvas.Left="0"
+                           Canvas.Top="0"
+                           Width="{Binding ActualWidth, ElementName=BAWBUtrs}"
+                           Height="{Binding ActualHeight, ElementName=BAWBUtrs}">
+                    </Image>
+                </Canvas>
+            </Grid>
+            <local:DM_Mode_Control x:Name="DopplerCtrl" Grid.Row="1" Visibility="Collapsed" BorderThickness="0" BorderBrush="Transparent" Background="Black"/>
+            <TextBlock x:Name="ErrorMsg" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" FontSize="25" Foreground="Yellow"/>
+            
+            
+        </Grid>
+
+        <Button x:Name="CloseSoftWare" Grid.Row="2" Content="Cerrar" Width="100" Height="50" Click="CloseSoftWare_Click" />
+        <Grid x:Name="ColorMapGrid" Grid.Column="3" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="256"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="256"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="Transparent" HorizontalAlignment="Left">
+                <local:ColorMapControl x:Name="GrayMap" Height="256" Width="16" />
+            </Grid>
+            <TextBlock Grid.Row="1" x:Name="MaxScale" Margin="0,5" FontSize="12" Padding="0" TextAlignment="Left" Width="16" Visibility="{Binding ElementName=ColorMap,Path=Visibility}"/>
+            <TextBlock Grid.Row="3" x:Name="MinScale" Margin="0,5" FontSize="12" Padding="0" TextAlignment="Left" Width="16" Visibility="{Binding ElementName=ColorMap,Path=Visibility}"/>
+            <Grid Grid.Row="2"  Background="Transparent" HorizontalAlignment="Left">
+                <local:ColorMapControl x:Name="ColorMap" Grid.Row="1" Height="256" Width="16"  Visibility="Collapsed"/>
+            </Grid>
+            <Grid Grid.Row="4" HorizontalAlignment="Left">
+                <local:ColorMapControl x:Name="DM_GrayMap" Visibility="{Binding ElementName=DopplerCtrl,Path=Visibility}" Height="256" Width="16" />
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Window>

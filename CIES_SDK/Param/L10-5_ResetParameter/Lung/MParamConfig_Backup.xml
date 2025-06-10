@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<MParamConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0">
+  <GainLevel>50</GainLevel>
+  <TimeScale>20</TimeScale>
+  <GrayLevel>1</GrayLevel>
+  <PseudocolorLevel>0</PseudocolorLevel>
+</MParamConfig>

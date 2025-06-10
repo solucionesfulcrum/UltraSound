@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<ExamConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0">
+  <ExamInfoList>
+      <ExamInfo>
+      <ExamName_ZH>颈动脉</ExamName_ZH>
+      <ExamName_EN>Carotid</ExamName_EN>
+      <ExamNameCanShow>true</ExamNameCanShow>
+      <ExamOrder>1</ExamOrder>
+      <ExamName_Alias />
+      <IsDefaultExam>false</IsDefaultExam>
+    </ExamInfo>
+      <ExamInfo>
+      <ExamName_ZH>小器官</ExamName_ZH>
+      <ExamName_EN>SmallParts</ExamName_EN>
+      <ExamNameCanShow>true</ExamNameCanShow>
+      <ExamOrder>2</ExamOrder>
+      <ExamName_Alias />
+      <IsDefaultExam>true</IsDefaultExam>
+     </ExamInfo>
+      <ExamInfo>
+      <ExamName_ZH>神经</ExamName_ZH>
+      <ExamName_EN>Nerve</ExamName_EN>
+      <ExamNameCanShow>true</ExamNameCanShow>
+      <ExamOrder>3</ExamOrder>
+      <ExamName_Alias />
+      <IsDefaultExam>false</IsDefaultExam>
+    </ExamInfo>
+      <ExamInfo>
+      <ExamName_ZH>肌骨</ExamName_ZH>
+      <ExamName_EN>MSK</ExamName_EN>
+      <ExamNameCanShow>true</ExamNameCanShow>
+      <ExamOrder>4</ExamOrder>
+      <ExamName_Alias />
+      <IsDefaultExam>false</IsDefaultExam>
+    </ExamInfo>
+   <ExamInfo>
+      <ExamName_ZH>浅表血管</ExamName_ZH>
+      <ExamName_EN>Vascular</ExamName_EN>
+      <ExamNameCanShow>true</ExamNameCanShow>
+      <ExamOrder>5</ExamOrder>
+      <ExamName_Alias />
+      <IsDefaultExam>false</IsDefaultExam>
+    </ExamInfo>
+     <ExamInfo>
+      <ExamName_ZH>肺部</ExamName_ZH>
+      <ExamName_EN>Lung</ExamName_EN>
+      <ExamNameCanShow>true</ExamNameCanShow>
+      <ExamOrder>6</ExamOrder>
+      <ExamName_Alias />
+      <IsDefaultExam>false</IsDefaultExam>
+    </ExamInfo>
+      <ExamInfo>
+      <ExamName_ZH>膈肌</ExamName_ZH>
+      <ExamName_EN>Diaphragm</ExamName_EN>
+      <ExamNameCanShow>true</ExamNameCanShow>
+      <ExamOrder>7</ExamOrder>
+      <ExamName_Alias />
+      <IsDefaultExam>false</IsDefaultExam>
+    </ExamInfo>
+    <ExamInfo>
+      <ExamName_ZH>内瘘</ExamName_ZH>
+      <ExamName_EN>AVF</ExamName_EN>
+      <ExamNameCanShow>true</ExamNameCanShow>
+      <ExamOrder>8</ExamOrder>
+      <ExamName_Alias />
+      <IsDefaultExam>false</IsDefaultExam>
+    </ExamInfo>
+    <ExamInfo>
+      <ExamName_ZH>General</ExamName_ZH>
+      <ExamName_EN>General</ExamName_EN>
+      <ExamNameCanShow>true</ExamNameCanShow>
+      <ExamOrder>9</ExamOrder>
+      <ExamName_Alias />
+      <IsDefaultExam>false</IsDefaultExam>
+    </ExamInfo>
+  </ExamInfoList>
+</ExamConfig>

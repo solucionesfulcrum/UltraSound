@@ -1,0 +1,31 @@
+﻿Compilación iniciada a las 13/09/2024 23:48:59.
+     1>Proyecto "C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\CLRDemoServer\CLRDemoServer.vcxproj" en el nodo 2 (Build destinos).
+     1>Link:
+         CLRDemoServer.vcxproj -> C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\Debug_x86\CLRDemoServer.dll
+       PostBuildEvent:
+         MD C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\Debug..\log
+         Copy "C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\CIES_SDK\lib\" "C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\Debug_x86\"
+         Copy "C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\CIES_SDK\conf\Log.cfg" "C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\Debug_x86\"..\conf
+         :VCEnd
+         Ya existe el subdirectorio o el archivo C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION.
+         Error mientras se procesaba: C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION.
+         El sistema no puede encontrar la ruta especificada.
+         Error mientras se procesaba: 1.0.1\Debug..\log.
+         C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\CIES_SDK\lib\ColorImageEngineServer.dll
+         C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\CIES_SDK\lib\ColorImageEngineServer.lib
+         C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\CIES_SDK\lib\DumpCatchDll.dll
+         C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\CIES_SDK\lib\log4cplusU.dll
+         C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\CIES_SDK\lib\log4cplusUD.dll
+         C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\CIES_SDK\lib\msvcp120.dll
+         C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\CIES_SDK\lib\msvcp120d.dll
+         C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\CIES_SDK\lib\msvcr120.dll
+         C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\CIES_SDK\lib\msvcr120d.dll
+         C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\CIES_SDK\lib\UltrasoundImagingAlgorithm.dat
+         C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\CIES_SDK\lib\UltrasoundImagingAlgorithm.dll
+                11 archivo(s) copiado(s).
+                 1 archivo(s) copiado(s).
+     1>Compilación del proyecto terminada "C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\CLRDemoServer\CLRDemoServer.vcxproj" (Build destinos).
+
+Compilación correcta.
+
+Tiempo transcurrido 00:00:00.57

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ImageParamConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0">
+  <GainLevel>50</GainLevel>
+  <DepthLevel>3</DepthLevel>
+  <DynamicRange>65</DynamicRange>
+  <IsImageEnhancement>true</IsImageEnhancement>
+  <SRILevel>3</SRILevel>
+  <CorrelationLevel>1</CorrelationLevel>
+  <GrayLevel>4</GrayLevel>
+  <PseudocolorLevel>0</PseudocolorLevel>
+  <L_R>0</L_R>
+  <T_B>0</T_B>
+  <Harmonic>1</Harmonic>
+  <Frequency>2</Frequency>
+  <FocusArea>1</FocusArea>
+</ImageParamConfig>

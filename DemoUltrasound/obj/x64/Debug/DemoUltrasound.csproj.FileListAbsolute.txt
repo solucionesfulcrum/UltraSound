@@ -1,0 +1,166 @@
+E:\00WorkSpace\PA12\CIESDKUseDemo\Debug_x64\DemoUltrasound.exe.config
+E:\00WorkSpace\PA12\CIESDKUseDemo\Debug_x64\DemoUltrasound.exe
+E:\00WorkSpace\PA12\CIESDKUseDemo\Debug_x64\DemoUltrasound.pdb
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\DemoUltrasound.csproj.AssemblyReference.cache
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\ColorMapControl.baml
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\ColorSamplingFrameControl.baml
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\ColorSamplingFrameFlag.baml
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\Doppler\DopplerSamplingGateControl.baml
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\Doppler\EnvelopeControl.baml
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\Doppler\SamplingGateFlag.baml
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\MMode\MModeSamplingLineControl.baml
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\BC_Mode_UltraSound_Control.g.cs
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\ColorMapControl.g.cs
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\ColorSamplingFrameControl.g.cs
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\ColorSamplingFrameFlag.g.cs
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\DM_Mode_Control.g.cs
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\Doppler\DopplerSamplingGateControl.g.cs
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\Doppler\EnvelopeControl.g.cs
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\Doppler\FlowScaleControl.g.cs
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\Doppler\SamplingGateFlag.g.cs
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\MainWindow.g.cs
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\MMode\MModeSamplingLineControl.g.cs
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\MMode\TimerScaleControl.g.cs
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\ScaleMarksControl.g.cs
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\App.g.cs
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\GeneratedInternalTypeHelper.g.cs
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\DemoUltrasound_MarkupCompile.cache
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\DemoUltrasound_MarkupCompile.lref
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\BC_Mode_UltraSound_Control.baml
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\DM_Mode_Control.baml
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\Doppler\FlowScaleControl.baml
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\MainWindow.baml
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\MMode\TimerScaleControl.baml
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\ScaleMarksControl.baml
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\DemoUltrasound.g.resources
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\DemoUltrasound.Properties.Resources.resources
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\DemoUltrasound.csproj.GenerateResource.cache
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\DemoUltrasound.csproj.CoreCompileInputs.cache
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\DemoUltrasound.csproj.CopyComplete
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\DemoUltrasound.exe
+E:\00WorkSpace\PA12\CIESDKUseDemo\DemoUltrasound\obj\x64\Debug\DemoUltrasound.pdb
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\DemoUltrasound.csprojResolveAssemblyReference.cache
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\ColorMapControl.baml
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\ColorSamplingFrameControl.baml
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\ColorSamplingFrameFlag.baml
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\Doppler\DopplerSamplingGateControl.baml
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\Doppler\EnvelopeControl.baml
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\Doppler\SamplingGateFlag.baml
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\MMode\MModeSamplingLineControl.baml
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\BC_Mode_UltraSound_Control.g.cs
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\ColorMapControl.g.cs
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\ColorSamplingFrameControl.g.cs
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\ColorSamplingFrameFlag.g.cs
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\DM_Mode_Control.g.cs
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\Doppler\DopplerSamplingGateControl.g.cs
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\Doppler\EnvelopeControl.g.cs
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\Doppler\FlowScaleControl.g.cs
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\Doppler\SamplingGateFlag.g.cs
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\MainWindow.g.cs
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\MMode\MModeSamplingLineControl.g.cs
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\MMode\TimerScaleControl.g.cs
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\ScaleMarksControl.g.cs
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\App.g.cs
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\DemoUltrasound_MarkupCompile.cache
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\DemoUltrasound_MarkupCompile.lref
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\DemoUltrasound.exe
+E:\Proyectos\Kevin\DemoUltrasound\obj\x64\Debug\DemoUltrasound.pdb
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\Debug_x64\avcodec-57.dll
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\Debug_x64\avdevice-57.dll
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\Debug_x64\avfilter-6.dll
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\Debug_x64\avformat-57.dll
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\Debug_x64\avutil-55.dll
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\Debug_x64\postproc-54.dll
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\Debug_x64\swresample-2.dll
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\Debug_x64\swscale-4.dll
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\Debug_x64\Accord.dll.config
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\Debug_x64\DemoUltrasound.exe.config
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\Debug_x64\DemoUltrasound.exe
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\Debug_x64\DemoUltrasound.pdb
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\DemoUltrasound.csprojResolveAssemblyReference.cache
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\ColorMapControl.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\ColorSamplingFrameControl.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\ColorSamplingFrameFlag.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\Doppler\DopplerSamplingGateControl.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\Doppler\EnvelopeControl.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\Doppler\SamplingGateFlag.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\MMode\MModeSamplingLineControl.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\BC_Mode_UltraSound_Control.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\ColorMapControl.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\ColorSamplingFrameControl.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\ColorSamplingFrameFlag.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\DM_Mode_Control.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\Doppler\DopplerSamplingGateControl.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\Doppler\EnvelopeControl.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\Doppler\FlowScaleControl.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\Doppler\SamplingGateFlag.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\MainWindow.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\MMode\MModeSamplingLineControl.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\MMode\TimerScaleControl.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\ScaleMarksControl.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\App.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\DemoUltrasound_Content.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\DemoUltrasound_MarkupCompile.cache
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\DemoUltrasound_MarkupCompile.lref
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\BC_Mode_UltraSound_Control.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\DM_Mode_Control.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\Doppler\FlowScaleControl.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\MainWindow.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\MMode\TimerScaleControl.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\ScaleMarksControl.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\DemoUltrasound.g.resources
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\DemoUltrasound.Properties.Resources.resources
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\DemoUltrasound.csproj.GenerateResource.Cache
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\DemoUltrasound.exe
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION 1.0.1\DemoUltrasound\obj\x64\Debug\DemoUltrasound.pdb
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\DemoUltrasound.csprojResolveAssemblyReference.cache
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\ColorMapControl.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\ColorSamplingFrameControl.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\ColorSamplingFrameFlag.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\Doppler\DopplerSamplingGateControl.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\Doppler\EnvelopeControl.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\Doppler\SamplingGateFlag.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\MMode\MModeSamplingLineControl.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\BC_Mode_UltraSound_Control.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\ColorMapControl.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\ColorSamplingFrameControl.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\ColorSamplingFrameFlag.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\DM_Mode_Control.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\Doppler\DopplerSamplingGateControl.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\Doppler\EnvelopeControl.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\Doppler\FlowScaleControl.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\Doppler\SamplingGateFlag.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\MainWindow.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\MMode\MModeSamplingLineControl.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\MMode\TimerScaleControl.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\ScaleMarksControl.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\App.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\DemoUltrasound_Content.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\DemoUltrasound_MarkupCompile.cache
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\DemoUltrasound_MarkupCompile.lref
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\DemoUltrasound.exe
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\DemoUltrasound.pdb
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\Debug_x64\avcodec-57.dll
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\Debug_x64\avdevice-57.dll
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\Debug_x64\avfilter-6.dll
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\Debug_x64\avformat-57.dll
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\Debug_x64\avutil-55.dll
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\Debug_x64\postproc-54.dll
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\Debug_x64\swresample-2.dll
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\Debug_x64\swscale-4.dll
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\Debug_x64\Accord.dll.config
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\Debug_x64\DemoUltrasound.exe.config
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\Debug_x64\DemoUltrasound.exe
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\Debug_x64\DemoUltrasound.pdb
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\BC_Mode_UltraSound_Control.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\DM_Mode_Control.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\Doppler\FlowScaleControl.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\MainWindow.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\MMode\TimerScaleControl.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\ScaleMarksControl.baml
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\DemoUltrasound.g.resources
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\DemoUltrasound.Properties.Resources.resources
+C:\Users\KEVIN\Desktop\PUCP\TESIS\PROYECTO\VERSION_1\DemoUltrasound\obj\x64\Debug\DemoUltrasound.csproj.GenerateResource.Cache

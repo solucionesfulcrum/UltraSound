@@ -1,0 +1,481 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly CLRDemoServer, Version=1.0.*, Culture=Todos los idiomas (todos los países): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class CLRDemoServer.ImageDataInfo_CLR: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Single m_fFrameRate : Public
+    Int32 m_nFrameWidthPixels : Public
+    Int32 m_nFrameHeightPixels : Public
+    Int32 m_nImageWidthPixels : Public
+    Int32 m_nImageHeightPixels : Public
+    Single m_fResolution : Public
+    Int32 m_nHour : Public
+    Int32 m_nMinute : Public
+    Int32 m_nSecond : Public
+    Int32 m_nMillisecond : Public
+    Int32 m_nDepth : Public
+    Int32 m_nFrameNumber : Public
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class CLRDemoServer.EnvelopeInfo_CLR: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean m_bHadData : Public
+    Int16 m_nEnvelopeMax : Public
+    Int16 m_nEnvelopeMean : Public
+Class CLRDemoServer.D_PWDataInfo_CLR: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    CLRDemoServer.EnvelopeInfo_CLR envelopeInfo : Public
+    Int32 m_nDateNum : Public
+    Single m_AutoMeasureAngle : Public
+    Single m_BloodRadius_T : Public
+    Single m_BloodRadius_B : Public
+    Int32 m_nD_PWDataLen : Public
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class CLRDemoServer.MDataInfo_CLR: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Int32 m_nDateNum : Public
+    Int32 m_nMDataLen : Public
+    Int32 m_nFrameNumber : Public
+    Int32 m_nImageHeightPixels : Public
+    Int32 m_nMLineNum : Public
+    Boolean m_bClearScreen : Public
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class CLRDemoServer.ImageData: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Int32[] m_B_Imagedata : Public
+    Int32[] m_C_Imagedata : Public
+    Int32[] m_D_PW_Imagedata : Public
+    Int32[] m_M_Imagedata : Public
+    CLRDemoServer.ImageDataInfo_CLR m_B_ImageInfo : Public
+    CLRDemoServer.ImageDataInfo_CLR m_C_ImageInfo : Public
+    CLRDemoServer.D_PWDataInfo_CLR[] m_D_PW_ImageInfos : Public
+    CLRDemoServer.MDataInfo_CLR m_M_ImageInfo : Public
+    Int32 m_nBImageDataLen : Public
+    Int32 m_nCImageDataLen : Public
+    Int32 m_nD_PWImageDataLen : Public
+    Int32 m_nMImageDataLen : Public
+    Boolean m_bBHadData : Public
+    Boolean m_bCHadData : Public
+    Boolean m_bD_PWHadData : Public
+    Boolean m_bMHadData : Public
+    Int32 m_nD_PWDataNum : Public
+    Int32 m_nD_PWImageDataMaxLen IsConst : Public
+    Int32 m_nMDataNum : Public
+    Int32 m_nMImageDataMaxLen IsConst : Public
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class CLRDemoServer.ImageData_D_PW: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Int32[] m_D_PW_Imagedata : Public
+    CLRDemoServer.D_PWDataInfo_CLR[] m_D_PW_ImageInfos : Public
+    Int32 m_nD_PWImageDataLen : Public
+    Boolean m_bD_PWHadData : Public
+    Int32 m_nD_PWDataNum : Public
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class CLRDemoServer.ImageData_M: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Int32[] m_M_ImageData : Public
+    CLRDemoServer.MDataInfo_CLR[] m_M_ImageInfos : Public
+    Int32 m_nMImageDataLen : Public
+    Boolean m_bMHadData : Public
+    Int32 m_nMDataNum : Public
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class CLRDemoServer.B_ImageParam_CLR: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Int32 m_B_ImageParamType : Public
+    Int32 m_nWidth : Public
+    Int32 m_nHeight : Public
+    Int32 m_nDepth_level : Public
+    Single m_fGain : Public
+    Single m_fDR : Public
+    Int32 m_SRI_Level : Public
+    Int32 m_nCorrelation_Level : Public
+    Int32 m_nGrayColorMap_level : Public
+    Int32 m_nPseudoColorMap_level : Public
+    Single[] m_fTGC : Public
+    Int32 m_nHarmonic : Public
+    Int32 m_nFrequency : Public
+    Int32 m_nFocusArea : Public
+    Int32 m_nNE : Public
+    Int32 m_nNE_Theta : Public
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Struct CLRDemoServer.B_ImageParam_CLR+B_ImageParamType: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    B_ImageParamType All_Param = 8191 : Public, Static, Literal, HasDefault
+    B_ImageParamType Width_Param = 1 : Public, Static, Literal, HasDefault
+    B_ImageParamType Height_Param = 2 : Public, Static, Literal, HasDefault
+    B_ImageParamType Depth_level_Param = 4 : Public, Static, Literal, HasDefault
+    B_ImageParamType Gain_Param = 8 : Public, Static, Literal, HasDefault
+    B_ImageParamType DR_Param = 16 : Public, Static, Literal, HasDefault
+    B_ImageParamType SRI_level_Param = 32 : Public, Static, Literal, HasDefault
+    B_ImageParamType Correlation_level_Param = 64 : Public, Static, Literal, HasDefault
+    B_ImageParamType TGC_Param = 128 : Public, Static, Literal, HasDefault
+    B_ImageParamType GrayColorMap_level_Param = 256 : Public, Static, Literal, HasDefault
+    B_ImageParamType PseudoColorMap_level_Param = 512 : Public, Static, Literal, HasDefault
+    B_ImageParamType Harmonic_level_Param = 1024 : Public, Static, Literal, HasDefault
+    B_ImageParamType Frequency_level_Param = 2048 : Public, Static, Literal, HasDefault
+    B_ImageParamType FocusArea_level_Param = 4096 : Public, Static, Literal, HasDefault
+    B_ImageParamType NE_Param = 8192 : Public, Static, Literal, HasDefault
+    B_ImageParamType NE_Theta_Param = 16384 : Public, Static, Literal, HasDefault
+Class CLRDemoServer.C_ImageParam_CLR: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Int32 m_C_ImageParamType : Public
+    Single m_fGain : Public
+    Int32 m_nWallFilter_level : Public
+    Int32 m_nColorPriority_level : Public
+    Int32 m_nFrameCorrelation_level : Public
+    Int32 m_nColorMap_mode : Public
+    Int32 m_nColorMap_level : Public
+    Int32 m_nColorMap_inversion : Public
+    Int32 m_nPRF_Level : Public
+    Single m_fTheta : Public
+    Boolean m_bUse_B_BC_Mode : Public
+    Int32 m_nSpeed : Public
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Struct CLRDemoServer.C_ImageParam_CLR+C_ImageParamType: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    C_ImageParamType All_Param = 2047 : Public, Static, Literal, HasDefault
+    C_ImageParamType Gain_Param = 1 : Public, Static, Literal, HasDefault
+    C_ImageParamType WallFilter_level_Param = 2 : Public, Static, Literal, HasDefault
+    C_ImageParamType ColorPriority_level_Param = 4 : Public, Static, Literal, HasDefault
+    C_ImageParamType FrameCorrelation_level_Param = 8 : Public, Static, Literal, HasDefault
+    C_ImageParamType Color_Mode_Param = 16 : Public, Static, Literal, HasDefault
+    C_ImageParamType ColorMap_level_Param = 32 : Public, Static, Literal, HasDefault
+    C_ImageParamType ColorMap_Inversion_Param = 64 : Public, Static, Literal, HasDefault
+    C_ImageParamType PRF_Level_Param = 128 : Public, Static, Literal, HasDefault
+    C_ImageParamType Theta_Param = 256 : Public, Static, Literal, HasDefault
+    C_ImageParamType B_BC_Mode_Param = 512 : Public, Static, Literal, HasDefault
+    C_ImageParamType Speed_Param = 1024 : Public, Static, Literal, HasDefault
+Class CLRDemoServer.D_PW_ImageParam_CLR: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Int32 m_D_PW_ImageParamType : Public
+    Int32 m_nWidth : Public
+    Int32 m_nHeight : Public
+    Int32 m_prf_rate : Public
+    Single m_fGain : Public
+    Single m_fDR : Public
+    Single m_fFrequency : Public
+    Single m_fTime : Public
+    Int32 m_nBaseLineLevel : Public
+    Int32 m_nWall_level : Public
+    Int32 m_nSamplingVolume : Public
+    Int32 m_nInversion : Public
+    Int32 m_nSpeed : Public
+    Int32 m_nGrayColorMap_level : Public
+    Int32 m_nPseudoColorMap_level : Public
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Struct CLRDemoServer.D_PW_ImageParam_CLR+D_PW_ImageParamType: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    D_PW_ImageParamType All_Param = 16383 : Public, Static, Literal, HasDefault
+    D_PW_ImageParamType Width_Param = 1 : Public, Static, Literal, HasDefault
+    D_PW_ImageParamType Height_Param = 2 : Public, Static, Literal, HasDefault
+    D_PW_ImageParamType PRF_Rate_Param = 4 : Public, Static, Literal, HasDefault
+    D_PW_ImageParamType Gain_Param = 8 : Public, Static, Literal, HasDefault
+    D_PW_ImageParamType DR_Param = 16 : Public, Static, Literal, HasDefault
+    D_PW_ImageParamType Frequency_Param = 32 : Public, Static, Literal, HasDefault
+    D_PW_ImageParamType Time_Param = 64 : Public, Static, Literal, HasDefault
+    D_PW_ImageParamType BaseLine_Level_Param = 128 : Public, Static, Literal, HasDefault
+    D_PW_ImageParamType Wall_Level_Param = 256 : Public, Static, Literal, HasDefault
+    D_PW_ImageParamType Sampling_Volume_Param = 512 : Public, Static, Literal, HasDefault
+    D_PW_ImageParamType Inversion_Param = 1024 : Public, Static, Literal, HasDefault
+    D_PW_ImageParamType Speed_Param = 2048 : Public, Static, Literal, HasDefault
+    D_PW_ImageParamType GrayColorMap_level_Param = 4096 : Public, Static, Literal, HasDefault
+    D_PW_ImageParamType PseudoColorMap_level_Param = 8192 : Public, Static, Literal, HasDefault
+Class CLRDemoServer.M_ImageParam_CLR: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Int32 m_M_ImageParamType : Public
+    Single m_fGain : Public
+    Single m_fTime : Public
+    Int32 m_nWidth : Public
+    Int32 m_nHeight : Public
+    Int32 m_nGrayColorMap_level : Public
+    Int32 m_nPseudoColorMap_level : Public
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Struct CLRDemoServer.M_ImageParam_CLR+M_ImageParamType: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    M_ImageParamType All_Param = 63 : Public, Static, Literal, HasDefault
+    M_ImageParamType Gain_Param = 1 : Public, Static, Literal, HasDefault
+    M_ImageParamType Time_Param = 2 : Public, Static, Literal, HasDefault
+    M_ImageParamType Width_Param = 4 : Public, Static, Literal, HasDefault
+    M_ImageParamType Height_Param = 8 : Public, Static, Literal, HasDefault
+    M_ImageParamType GrayColorMap_level_Param = 16 : Public, Static, Literal, HasDefault
+    M_ImageParamType PseudoColorMap_level_Param = 32 : Public, Static, Literal, HasDefault
+Class CLRDemoServer.Probe_Info: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Single m_fPith : Public
+    Single m_fRadiusCurvature : Public
+    Int32 m_nFocusNum : Public
+    Int32 Probe_type : Public
+    Single m_fImageAngle : Public
+    Int32 m_nShowDepthLevel : Public
+    Int32[] m_pDepthList : Public
+    Boolean m_bC_Tx_deflectionflag : Public
+    Int32[] m_pC_Tx_angle : Public
+    Boolean m_bD_Tx_deflectionflag : Public
+    Int32[] m_pD_Tx_angle : Public
+    Boolean m_bB_NE_deflectionflag : Public
+    Int32[] m_pB_NE_Theta_angle : Public
+    Single[] m_fB_fund_Tx_freq : Public
+    Single[] m_fB_harm_Tx_freq : Public
+    Single[] m_fC_Tx_freq : Public
+    Single[] m_fD_Tx_freq : Public
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class CLRDemoServer.D_PWInfo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Single m_nFrequency : Public
+    Single[] m_fPRF : Public
+    Boolean m_bUseLaunchDeflection : Public
+    Single m_nLaunchDeflectionAngle : Public
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class CLRDemoServer.EventDelegate_HWMH: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32, Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class CLRDemoServer.HardWareMsgHandler: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32, Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class CLRDemoServer.EventDelegate_HWMHS: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32, Int32*, Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, Int32*, Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class CLRDemoServer.HardWareMsgSHandler: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32, Int32[]): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, Int32[], AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class CLRDemoServer.NativeInterface: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    SetNative(Native*): PrivateScope, Public, HideBySig
+    SetDelegateMthod(HardWareMsgSHandler): PrivateScope, Public, HideBySig
+    SetDelegateMthod(HardWareMsgHandler): PrivateScope, Public, HideBySig
+    ClearDelegateMthod(): PrivateScope, Public, HideBySig
+    Callback_HWMH(Int32, Int32): PrivateScope, Public, HideBySig
+    Callback_HWMHS(Int32, Int32*, Int32): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class CLRDemoServer.CLScanMode: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ContainBScanMode(CLScanModeEnum): PrivateScope, Public, Static, HideBySig
+    ContainCScanMode(CLScanModeEnum): PrivateScope, Public, Static, HideBySig
+    ContainBCScanMode(CLScanModeEnum): PrivateScope, Public, Static, HideBySig
+    ContainDPWScanMode(CLScanModeEnum): PrivateScope, Public, Static, HideBySig
+    ContainMScanMode(CLScanModeEnum): PrivateScope, Public, Static, HideBySig
+    ContainBMScanMode(CLScanModeEnum): PrivateScope, Public, Static, HideBySig
+Struct CLRDemoServer.CLScanMode+CLScanModeEnum: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CLScanModeEnum B = 1 : Public, Static, Literal, HasDefault
+    CLScanModeEnum C = 2 : Public, Static, Literal, HasDefault
+    CLScanModeEnum D_PW = 4 : Public, Static, Literal, HasDefault
+    CLScanModeEnum D = 16 : Public, Static, Literal, HasDefault
+    CLScanModeEnum BC = 3 : Public, Static, Literal, HasDefault
+    CLScanModeEnum M = 32 : Public, Static, Literal, HasDefault
+    CLScanModeEnum BM = 33 : Public, Static, Literal, HasDefault
+Class CLRDemoServer.CLRUSDeviceInfo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean isPowerOff : Public
+    Int32 PID : Public
+    Int32 VID : Public
+    System.String DevicePath : Public
+    Int32 fwVersion_major : Public
+    Int32 fwVersion_minor : Public
+    Int32 nLogicVersion_Major : Public
+    Int32 nLogicVersion_Minor : Public
+    Int32 nHWVersion_Major : Public
+    Int32 nHWVersion_Minor : Public
+    UInt32 unLogicCompileVersion : Public
+    UInt16 DNA1 : Public
+    UInt16 DNA2 : Public
+    UInt16 DNA3 : Public
+    UInt16 DNA4 : Public
+    Single fUSBSupplyVoltage : Public
+    Single fTotalCurrent : Public
+    Single fTemperature : Public
+    Single fEmissionVoltage : Public
+    Boolean ProbeCanreplaced : Public
+    Int32 IsMultiProbe : Public
+    Int32 probeID : Public
+    Int32 probeAppendInfo : Public
+    Boolean probeConnect : Public
+    Int32 probeID_B : Public
+    Int32 probeAppendInfo_B : Public
+    Boolean probeConnect_B : Public
+    System.String productInfo : Public
+    System.String serialNumber : Public
+    Boolean isExportFlag : Public
+    Boolean isOEMFlag : Public
+    Int32 usHardWareIndex : Public
+    SByte PCB_Major IsSignUnspecifiedByte : Public
+    SByte PCB_Minor IsSignUnspecifiedByte : Public
+    SByte PCBA_Major IsSignUnspecifiedByte : Public
+    SByte PCBA_Minor IsSignUnspecifiedByte : Public
+Class CLRDemoServer.CLRHardWareInfo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 nLogicVersion_Major : Public
+    Int32 nLogicVersion_Minor : Public
+    Int32 nHWVersion_Major : Public
+    Int32 nHWVersion_Minor : Public
+    UInt32 unLogicCompileVersion : Public
+    UInt16 DNA1 : Public
+    UInt16 DNA2 : Public
+    UInt16 DNA3 : Public
+    UInt16 DNA4 : Public
+    Single fUSBSupplyVoltage : Public
+    Single fTotalCurrent : Public
+    Single fTemperature : Public
+    Single fEmissionVoltage : Public
+    Int32 OtherMsg1 : Public
+    Boolean ProbeCanreplaced : Public
+    Int32 IsMultiProbe : Public
+    Int32 unProbeID : Public
+    Int32 unProbeAppendInfo : Public
+    Boolean unProbeConnect : Public
+    Int32 unProbeID_B : Public
+    Int32 unProbeAppendInfo_B : Public
+    Boolean unProbeConnect_B : Public
+Class CLRDemoServer.CLR_DemoServer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Methods:
+    GetInstance(): PrivateScope, Public, Static, HideBySig
+    ReleaseInstance(): PrivateScope, Public, Static, HideBySig
+    GetSDKVersion(Int32[]): PrivateScope, Public, HideBySig
+    GetUSDeviceInfos(CLRUSDeviceInfo[], Int32&): PrivateScope, Public, HideBySig
+    SetUSDevicePath(String): PrivateScope, Public, HideBySig
+    SetParamPath(String, CLScanModeEnum): PrivateScope, Public, HideBySig
+    StartImageEngine(): PrivateScope, Public, HideBySig
+    StopImageEngine(): PrivateScope, Public, HideBySig
+    Freeze(): PrivateScope, Public, HideBySig
+    UnFreeze(): PrivateScope, Public, HideBySig
+    IsRuning(): PrivateScope, Public, HideBySig
+    GetHardWareInfo(CLRHardWareInfo): PrivateScope, Public, HideBySig
+    GetProberInfo(Probe_Info, String): PrivateScope, Public, HideBySig
+    GetD_PWInfo(D_PWInfo, String): PrivateScope, Public, HideBySig
+    SetImageParam_B(B_ImageParam_CLR): PrivateScope, Public, HideBySig
+    SetImageParam_C(C_ImageParam_CLR): PrivateScope, Public, HideBySig
+    SetImageParam_D_PW(D_PW_ImageParam_CLR): PrivateScope, Public, HideBySig
+    SetImageParam_M(M_ImageParam_CLR): PrivateScope, Public, HideBySig
+    SetFocusArea(Single): PrivateScope, Public, HideBySig
+    GetCurrentFocusArea(Single&, Single&): PrivateScope, Public, HideBySig
+    GetCurrentFocusArray(Single[]): PrivateScope, Public, HideBySig
+    GetCurrentFocusArrayByParamPath(String, Int32, Int32, Single[]): PrivateScope, Public, HideBySig
+    GetColorMap(Int32[], Int32[]): PrivateScope, Public, HideBySig
+    GetColorMap_B(Int32[]): PrivateScope, Public, HideBySig
+    GetColorMap_C(Int32[]): PrivateScope, Public, HideBySig
+    GetColorMap_D(Int32[]): PrivateScope, Public, HideBySig
+    GetColorMap_M(Int32[]): PrivateScope, Public, HideBySig
+    GetImageDisplayData(ImageData): PrivateScope, Public, HideBySig
+    GetHistoryImageCount(): PrivateScope, Public, HideBySig
+    GetHistoryImageData(ImageData, Int32): PrivateScope, Public, HideBySig
+    GetImageDisplayData_D_PW(ImageData, Int32, Boolean&): PrivateScope, Public, HideBySig
+    GetHistoryImageData_D_PW(ImageData_D_PW, Int32, Int32): PrivateScope, Public, HideBySig
+    GetHistoryImageData_BM(Int32, Int32, ImageData, Int32&, Int32&, Double, Boolean(HasFieldMarshal), Double): PrivateScope, Public, HideBySig
+    GetCurrentFrameRate(): PrivateScope, Public, HideBySig
+    SetUseImageHistoryCache(Boolean(HasFieldMarshal), Int32): PrivateScope, Public, HideBySig
+    SetDelegateMthod(HardWareMsgSHandler): PrivateScope, Public, HideBySig
+    SetDelegateMthod(HardWareMsgHandler): PrivateScope, Public, HideBySig
+    ClearDelegateMthod(): PrivateScope, Public, HideBySig
+    IsUSBOpen(): PrivateScope, Public, HideBySig
+    GetImageWidthPixels(): PrivateScope, Public, HideBySig
+    GetImageHeightPixels(): PrivateScope, Public, HideBySig
+    PowerOn(String): PrivateScope, Public, HideBySig
+    PowerOff(String): PrivateScope, Public, HideBySig
+    SetCSamplingFrameParam_Quadrangle(Int32, Double, Double, Double, Double, Double, Double, Double, Double, Int32): PrivateScope, Public, HideBySig
+    Get_C_PRFList_Quadrangle(Int32, Double, Double, Double, Int32, Double[], Double&): PrivateScope, Public, HideBySig
+    SetCSamplingFrameParam_Sector(Int32, Double, Double, Double, Double, Double, Double, Double, Double): PrivateScope, Public, HideBySig
+    Get_C_PRFList_Sector(Int32, Double, Double, Double, Double[], Double&): PrivateScope, Public, HideBySig
+    SetD_PWSamplingGateParam_Line(Single, Single, Single, Single, Single, Int32, Int32): PrivateScope, Public, HideBySig
+    Get_D_PRFList_Line(Single, Single, Single, Int32, Double[], Double&): PrivateScope, Public, HideBySig
+    SetD_PWSamplingGateParam_Convex(Single, Single, Single, Single, Single, Single, Int32): PrivateScope, Public, HideBySig
+    Get_D_PRFList_Convex(Single, Single, Single, Single, Single, Double[], Double&): PrivateScope, Public, HideBySig
+    SetD_PWSamplingGateParam_PA(Single, Single, Single, Single, Single, Single, Int32): PrivateScope, Public, HideBySig
+    Get_D_PRFList_PA(Single, Single, Single, Single, Single, Double[], Double&): PrivateScope, Public, HideBySig
+    SetSamplingLineParam_Line(Single, Single, Single, Single): PrivateScope, Public, HideBySig
+    SetSamplingLineParam_Convex(Single, Single, Single, Single): PrivateScope, Public, HideBySig
+    SetSamplingLineParam_Phased(Single, Single, Single, Single): PrivateScope, Public, HideBySig
+    AutomaticDiameterMeasurement(Int32, Single, Single, Single&, Single&, Single&): PrivateScope, Public, HideBySig
+    AutomaticTGC(Single[]): PrivateScope, Public, HideBySig
+    AutomaticSV(Single&, Single&, Single&, Int32&): PrivateScope, Public, HideBySig
+    AutoPRF(Int32&, Int32&): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig

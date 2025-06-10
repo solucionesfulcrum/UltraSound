@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<ExamConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0">
+  <ExamInfoList>
+    <ExamInfo>
+      <ExamName_ZH>腹部</ExamName_ZH>
+      <ExamName_EN>ABD</ExamName_EN>
+      <ExamNameCanShow>true</ExamNameCanShow>
+      <ExamOrder>1</ExamOrder>
+      <ExamName_Alias />
+      <IsDefaultExam>true</IsDefaultExam>
+    </ExamInfo>
+    <ExamInfo>
+      <ExamName_ZH>产科</ExamName_ZH>
+      <ExamName_EN>OB</ExamName_EN>
+      <ExamNameCanShow>true</ExamNameCanShow>
+      <ExamOrder>2</ExamOrder>
+      <ExamName_Alias />
+      <IsDefaultExam>false</IsDefaultExam>
+    </ExamInfo>
+    <ExamInfo>
+      <ExamName_ZH>泌尿</ExamName_ZH>
+      <ExamName_EN>Uro</ExamName_EN>
+      <ExamNameCanShow>true</ExamNameCanShow>
+      <ExamOrder>3</ExamOrder>
+      <ExamName_Alias />
+      <IsDefaultExam>false</IsDefaultExam>
+    </ExamInfo>
+    <ExamInfo>
+      <ExamName_ZH>肾脏</ExamName_ZH>
+      <ExamName_EN>Renal</ExamName_EN>
+      <ExamNameCanShow>true</ExamNameCanShow>
+      <ExamOrder>4</ExamOrder>
+      <ExamName_Alias />
+      <IsDefaultExam>false</IsDefaultExam>
+    </ExamInfo>
+    <ExamInfo>
+      <ExamName_ZH>脊椎</ExamName_ZH>
+      <ExamName_EN>Spine</ExamName_EN>
+      <ExamNameCanShow>true</ExamNameCanShow>
+      <ExamOrder>5</ExamOrder>
+      <ExamName_Alias />
+      <IsDefaultExam>false</IsDefaultExam>
+    </ExamInfo>
+  </ExamInfoList>
+</ExamConfig>

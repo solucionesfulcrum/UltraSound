@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<CParamConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0">
+  <GainLevel>50</GainLevel>
+  <WallFilter_level>1</WallFilter_level>
+  <PRF_Level>2</PRF_Level>
+  <ColorPriority_level>2</ColorPriority_level>
+  <FrameCorrelation_level>4</FrameCorrelation_level>
+  <Color_Mode_Level>0</Color_Mode_Level>
+  <ColorMap_level>1</ColorMap_level>
+  <Theta>-10</Theta>
+  <Speed_level>1</Speed_level>
+</CParamConfig>

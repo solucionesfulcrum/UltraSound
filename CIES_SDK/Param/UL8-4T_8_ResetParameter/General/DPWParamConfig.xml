@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<DPWParamConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0">
+  <GainLevel>0</GainLevel>
+  <DynamicRange>40</DynamicRange>
+  <PRFLevel>4</PRFLevel>
+  <BaseLineLevel>0</BaseLineLevel>
+  <WallLevel>2</WallLevel>
+  <Angle>0</Angle>
+  <TimeScale>6</TimeScale>
+  <LaunchDeflectionAngle>0</LaunchDeflectionAngle>
+  <SamplingVolume>2</SamplingVolume>
+  <SpeedLevel>1</SpeedLevel>
+  <FlowMeasurement>0</FlowMeasurement>
+  <CalibrationFactor>0.5</CalibrationFactor>
+  <GrayLevel>1</GrayLevel>
+  <PseudocolorLevel>0</PseudocolorLevel>
+</DPWParamConfig>

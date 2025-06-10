@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ExamConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0">
+  <ExamInfoList>
+    <ExamInfo>
+      <ExamName_ZH>General</ExamName_ZH>
+      <ExamName_EN>General</ExamName_EN>
+      <ExamNameCanShow>true</ExamNameCanShow>
+      <ExamOrder>1</ExamOrder>
+      <ExamName_Alias />
+      <IsDefaultExam>true</IsDefaultExam>
+    </ExamInfo>
+	<ExamInfo>
+      <ExamName_ZH>肺部</ExamName_ZH>
+      <ExamName_EN>Lung</ExamName_EN>
+      <ExamNameCanShow>true</ExamNameCanShow>
+      <ExamOrder>2</ExamOrder>
+      <ExamName_Alias />
+      <IsDefaultExam>false</IsDefaultExam>
+    </ExamInfo>
+  </ExamInfoList>
+</ExamConfig>
