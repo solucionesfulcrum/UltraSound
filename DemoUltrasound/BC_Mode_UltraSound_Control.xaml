@@ -19,6 +19,13 @@
                  Height="{Binding ImageShowHeigth}" Width="{Binding ImageShowWidth}" ></Image>
         <Image x:Name="BImage_PW" Stretch="Uniform" Visibility="Collapsed"
                  Height="{Binding ImageShowHeigth}" Width="{Binding ImageShowWidth}" ></Image>
+        <Image
+            x:Name="CwtImage"
+            Stretch="Uniform"
+            Visibility="Collapsed" 
+            Height="{Binding ImageShowHeigth}"
+            Width="{Binding ImageShowWidth}"
+        />
         <Grid x:Name="BControlGrid" VerticalAlignment="Top" Height="{Binding ImageShowHeigth}" Width="{Binding ImageShowWidth}" SizeChanged="BControlGrid_SizeChanged" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>

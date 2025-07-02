@@ -203,6 +203,7 @@
     <Compile Include="SignalProcessing\CWTSWSProcessor.cs" />
     <Compile Include="SignalProcessing\Wavelet.cs" />
     <Compile Include="UltrasoundListener.cs" />
+    <Compile Include="Utils\ImageUtils.cs" />
     <Page Include="BC_Mode_UltraSound_Control.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

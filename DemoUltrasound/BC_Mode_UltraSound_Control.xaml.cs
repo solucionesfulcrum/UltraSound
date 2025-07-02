@@ -14,6 +14,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DemoUltrasound.Setting;
+using DemoUltrasound.SignalProcessing;
+using DemoUltrasound.Utils;
+using DemoUltrasound.SignalProcessing;
+using System.Numerics;
 
 namespace DemoUltrasound
 {
@@ -23,6 +27,9 @@ namespace DemoUltrasound
     /// </summary>
     public partial class BC_Mode_UltraSound_Control : UserControl, INotifyPropertyChanged
     {
+        private Int32Rect _lastRoiRect;
+        private int        _lastAngle;
+        
         WriteableBitmap _wb;
 
         private int _imageHeigth;
@@ -35,13 +42,107 @@ namespace DemoUltrasound
         public BC_Mode_UltraSound_Control()
         {
             InitializeComponent();
-
+            this.ColorFrameControl.QuadrangleFrameChangedEvent += OnSamplingFrameChanged;
             this.DataContext = this;
             this.GridShell.DataContext = this;
             this.MModeSLControl.DataContext = this;
             this.ColorFrameControl.DataContext = this;
             this.DoppleSGControl.DataContext = this;
             InitParam();
+        }
+        
+        private void OnSamplingFrameChanged(int depth,
+                                    double _1, double _2, double _3, double _4,
+                                    double roiX, double roiY, double roiW, double roiH,
+                                    int angle)
+        {
+            // 3.1) Sacar el bitmap actual (el que pinta B-mode)
+            var wbSource = BImage.Source as WriteableBitmap;
+            if (wbSource == null) 
+                return;    // si no hay nada pintado aún, salimos
+
+            // 3.2) Prepara el rectángulo entero ronda a int
+            var roi = new Int32Rect(
+                (int)Math.Round(roiX),
+                (int)Math.Round(roiY),
+                (int)Math.Round(roiW),
+                (int)Math.Round(roiH)
+            );
+
+            // 3.3) Extrae los píxeles BGR32
+            byte[] bgr;
+            try
+            {
+                bgr = ImageUtils.ExtractRoiPixels(wbSource, roi, angle);
+            }
+            catch
+            {
+                // en caso de que algo falle, no interrumpimos la app
+                return;
+            }
+
+            // 3.4) Convierte a señal gris
+            var gray = ImageUtils.ToGraySignal(bgr, roi.Width, roi.Height);
+
+            // 3.5) Calcula la CWT
+            // define aquí tu wavelet y escalas deseadas
+            double fs = 1.0;                      // tasa de muestreo (ajusta al valor real)
+            var scales = Enumerable.Range(1, 32)  // ejemplo: 32 escalas
+                                 .Select(i => i * 1.0)
+                                 .ToArray();
+            var cwt = new ContinuousWaveletTransform(gray, fs);
+            var coeffs = cwt.ComputeCWT(new MorletWavelet(), scales);
+
+            // 3.6) Escoge una fila (por ejemplo, primera escala) y normaliza
+            int scaleIdx = 0;
+            var row = new double[roi.Width];
+            for (int x = 0; x < roi.Width; x++)
+                row[x] = coeffs[scaleIdx, x].Magnitude;
+            double max = row.Max();
+            if (max <= 0) max = 1;
+
+            // 3.7) Crea un WriteableBitmap Gray8 de tamaño [ancho=roi.Width, alto=1]
+            var bmp = new WriteableBitmap(
+                roi.Width, 1,            // alto=1 px
+                96, 96,
+                PixelFormats.Gray8,
+                null);
+
+            // rellena un buffer byte[]
+            var pixels = new byte[roi.Width];
+            for (int x = 0; x < roi.Width; x++)
+                pixels[x] = (byte)(Clamp(row[x] / max * 255, 0, 255));
+
+            // escribe los píxeles
+            bmp.WritePixels(
+                new Int32Rect(0, 0, roi.Width, 1),
+                pixels,
+                roi.Width,   // stride = ancho * 1 byte/pixel
+                0);
+
+            // 3.8) Muestra el resultado
+            CwtImage.Source = bmp;
+            CwtImage.Visibility = Visibility.Visible;
+        }
+        
+        private static double Clamp(double val, double min, double max)
+        {
+            if (val < min) return min;
+            if (val > max) return max;
+            return val;
+        }
+        
+        private void DisplayCwtResult(double[,] mag)
+        {
+            int h = mag.GetLength(0), w = mag.GetLength(1);
+            var wb = new WriteableBitmap(w, h, 96, 96, PixelFormats.Gray8, null);
+            byte[] buf = new byte[w*h];
+            for(int y=0; y<h; y++)
+            for(int x=0; x<w; x++)
+                buf[y*w + x] = (byte)Math.Min(255, mag[y,x]);
+
+            wb.WritePixels(new Int32Rect(0,0,w,h), buf, w, 0);
+            this.CwtImage.Source = wb;
         }
 
         #region 私有方法

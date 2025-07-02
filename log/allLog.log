@@ -11187,3 +11187,242 @@
 [2025-06-09 22:00:33:922][P:26820:14448][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
 [2025-06-09 22:01:19:451][P:26820:14448][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 2 ms
 [2025-06-09 22:01:19:485][P:26820:14448][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 2 ms
+[2025-06-19 21:39:29:373][P:29952:27748][INFO][ColorImageEngineServer.cpp:70] ---- ColorImageEngineServer ---- 
+[2025-06-19 21:39:33:097][P:29952:27748][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:510] BuildOpenCL cost time 319 ms
+[2025-06-19 21:39:33:242][P:29952:27748][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 7 ms
+[2025-06-19 21:39:33:325][P:29952:27748][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-06-19 21:39:33:432][P:29952:27748][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-06-19 21:39:33:433][P:29952:27748][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-06-19 21:39:33:434][P:29952:27748][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-06-19 21:39:33:478][P:29952:27748][ERROR][ColorImageEngineServer.cpp:177] Open HW failed : 11
+[2025-06-19 21:39:33:479][P:29952:27748][ERROR][ColorImageEngineServer.cpp:247]  OpenHW Error 11
+[2025-06-19 21:39:33:479][P:29952:27748][ERROR][ColorImageEngineServer.cpp:252]  SetATGC32 Error 1
+[2025-06-19 21:39:33:485][P:29952:27748][ERROR][ColorImageEngineServer.cpp:256]  SetApo Error 1
+[2025-06-19 21:39:33:491][P:29952:27748][ERROR][ColorImageEngineServer.cpp:260]  SetApoComp Error 1
+[2025-06-19 21:39:33:492][P:29952:27748][INFO][ColorImageEngineServer.cpp:268]  SendStartCmd 1
+[2025-07-02 11:21:18:666][P:16280:22112][INFO][ColorImageEngineServer.cpp:70] ---- ColorImageEngineServer ---- 
+[2025-07-02 11:21:22:370][P:16280:22112][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:510] BuildOpenCL cost time 309 ms
+[2025-07-02 11:21:22:523][P:16280:22112][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 10 ms
+[2025-07-02 11:21:22:656][P:16280:22112][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 11:21:22:758][P:16280:22112][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 11:21:22:759][P:16280:22112][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 11:21:22:760][P:16280:22112][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 11:21:22:793][P:16280:22112][ERROR][ColorImageEngineServer.cpp:177] Open HW failed : 11
+[2025-07-02 11:21:22:794][P:16280:22112][ERROR][ColorImageEngineServer.cpp:247]  OpenHW Error 11
+[2025-07-02 11:21:22:794][P:16280:22112][ERROR][ColorImageEngineServer.cpp:252]  SetATGC32 Error 1
+[2025-07-02 11:21:22:802][P:16280:22112][ERROR][ColorImageEngineServer.cpp:256]  SetApo Error 1
+[2025-07-02 11:21:22:807][P:16280:22112][ERROR][ColorImageEngineServer.cpp:260]  SetApoComp Error 1
+[2025-07-02 11:21:22:807][P:16280:22112][INFO][ColorImageEngineServer.cpp:268]  SendStartCmd 1
+[2025-07-02 11:23:15:617][P:8744:19288][INFO][ColorImageEngineServer.cpp:70] ---- ColorImageEngineServer ---- 
+[2025-07-02 11:23:17:288][P:8744:19288][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:510] BuildOpenCL cost time 246 ms
+[2025-07-02 11:23:17:292][P:8744:19288][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 11:23:17:296][P:8744:19288][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 11:23:17:425][P:8744:19288][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 11:23:17:427][P:8744:19288][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 11:23:17:428][P:8744:19288][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 11:23:17:528][P:8744:19288][ERROR][ColorImageEngineServer.cpp:177] Open HW failed : 11
+[2025-07-02 11:23:17:530][P:8744:19288][ERROR][ColorImageEngineServer.cpp:247]  OpenHW Error 11
+[2025-07-02 11:23:17:530][P:8744:19288][ERROR][ColorImageEngineServer.cpp:252]  SetATGC32 Error 1
+[2025-07-02 11:23:17:530][P:8744:19288][ERROR][ColorImageEngineServer.cpp:256]  SetApo Error 1
+[2025-07-02 11:23:17:531][P:8744:19288][ERROR][ColorImageEngineServer.cpp:260]  SetApoComp Error 1
+[2025-07-02 11:23:17:531][P:8744:19288][INFO][ColorImageEngineServer.cpp:268]  SendStartCmd 1
+[2025-07-02 11:23:20:372][P:8744:19288][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 11:23:20:374][P:8744:19288][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 11:23:20:374][P:8744:19288][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 11:23:20:413][P:8744:19288][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 11:23:20:413][P:8744:19288][ERROR][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1812] Algorithm Set Error : -214
+[2025-07-02 11:23:20:413][P:8744:19288][ERROR][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1902] B_set Depth_level 2; Gain 50.000000; DR 60.000000; SRI_level 5;				 Correlation_level 3; Width 1280; High 960; AD_len 1;				 FrameHeader_len 8; GrayColorMap_level 3; TintMap_level 0;				 TGC_manual[0] 0.000000; TGC_manual[1] 0.000000; TGC_manual[2] 0.000000;				 TGC_manual[3] 0.000000; TGC_manual[4] 0.000000; TGC_manual[5] 0.000000;				 NE_on_off 0; NE_Tx_angle 0 ; NE_line_len 0 
+[2025-07-02 11:23:20:414][P:8744:19288][ERROR][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1919] C_set Depth_level 2; WallFilter_level 1; Gain 50.000000; 				 ColorPriority_level 2;FrameCorrelation_level 2;				 Rx_start 0; Rx_num 12; Rx_idx 0; 				 Rx_len 8; Rx_scan_cross 3; 				 Width 1280; High 960; W_idx 26; W_len 0;				 H_idx 0; H_len 0; Theta 0.000000; 				 phi 0.000000; delta 0.000000; radius 0.000000;r_len 1.000000; 				 FrameHeader_len 8; ColorMap_level 1; 				 Color_mode 0; ColorMap_inversion 0; 
+[2025-07-02 11:23:20:470][P:8744:19288][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 11:23:20:503][P:8744:19288][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 11:26:16:343][P:8744:19288][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 2 ms
+[2025-07-02 11:26:16:377][P:8744:19288][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 3 ms
+[2025-07-02 11:34:39:757][P:9600:15968][INFO][ColorImageEngineServer.cpp:70] ---- ColorImageEngineServer ---- 
+[2025-07-02 11:34:42:294][P:9600:15968][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:510] BuildOpenCL cost time 160 ms
+[2025-07-02 11:34:42:363][P:9600:15968][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 3 ms
+[2025-07-02 11:34:42:446][P:9600:15968][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 11:34:42:539][P:9600:15968][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 11:34:42:541][P:9600:15968][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 11:34:42:541][P:9600:15968][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 11:34:42:575][P:9600:15968][ERROR][ColorImageEngineServer.cpp:177] Open HW failed : 11
+[2025-07-02 11:34:42:575][P:9600:15968][ERROR][ColorImageEngineServer.cpp:247]  OpenHW Error 11
+[2025-07-02 11:34:42:575][P:9600:15968][ERROR][ColorImageEngineServer.cpp:252]  SetATGC32 Error 1
+[2025-07-02 11:34:42:581][P:9600:15968][ERROR][ColorImageEngineServer.cpp:256]  SetApo Error 1
+[2025-07-02 11:34:42:585][P:9600:15968][ERROR][ColorImageEngineServer.cpp:260]  SetApoComp Error 1
+[2025-07-02 11:34:42:585][P:9600:15968][INFO][ColorImageEngineServer.cpp:268]  SendStartCmd 1
+[2025-07-02 11:34:49:143][P:9600:15968][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 11:34:49:145][P:9600:15968][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 11:34:49:146][P:9600:15968][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 11:34:49:184][P:9600:15968][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 11:34:49:184][P:9600:15968][ERROR][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1812] Algorithm Set Error : -214
+[2025-07-02 11:34:49:184][P:9600:15968][ERROR][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1902] B_set Depth_level 2; Gain 50.000000; DR 60.000000; SRI_level 5;				 Correlation_level 3; Width 1280; High 960; AD_len 1;				 FrameHeader_len 8; GrayColorMap_level 3; TintMap_level 0;				 TGC_manual[0] 0.000000; TGC_manual[1] 0.000000; TGC_manual[2] 0.000000;				 TGC_manual[3] 0.000000; TGC_manual[4] 0.000000; TGC_manual[5] 0.000000;				 NE_on_off 0; NE_Tx_angle 0 ; NE_line_len 0 
+[2025-07-02 11:34:49:184][P:9600:15968][ERROR][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1919] C_set Depth_level 2; WallFilter_level 1; Gain 50.000000; 				 ColorPriority_level 2;FrameCorrelation_level 2;				 Rx_start 0; Rx_num 12; Rx_idx 0; 				 Rx_len 8; Rx_scan_cross 3; 				 Width 1280; High 960; W_idx 26; W_len 0;				 H_idx 0; H_len 0; Theta 0.000000; 				 phi 0.000000; delta 0.000000; radius 0.000000;r_len 1.000000; 				 FrameHeader_len 8; ColorMap_level 1; 				 Color_mode 0; ColorMap_inversion 0; 
+[2025-07-02 11:34:49:234][P:9600:15968][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 11:34:49:266][P:9600:15968][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 11:36:52:514][P:9600:15968][ERROR][ColorImageEngineServer.cpp:247]  OpenHW Error 11
+[2025-07-02 11:36:52:514][P:9600:15968][ERROR][ColorImageEngineServer.cpp:252]  SetATGC32 Error 1
+[2025-07-02 11:36:52:514][P:9600:15968][ERROR][ColorImageEngineServer.cpp:256]  SetApo Error 1
+[2025-07-02 11:36:52:514][P:9600:15968][ERROR][ColorImageEngineServer.cpp:260]  SetApoComp Error 1
+[2025-07-02 11:36:52:514][P:9600:15968][INFO][ColorImageEngineServer.cpp:268]  SendStartCmd 1
+[2025-07-02 11:36:54:803][P:9600:15968][ERROR][ColorImageEngineServer.cpp:247]  OpenHW Error 11
+[2025-07-02 11:36:54:804][P:9600:15968][ERROR][ColorImageEngineServer.cpp:252]  SetATGC32 Error 1
+[2025-07-02 11:36:54:804][P:9600:15968][ERROR][ColorImageEngineServer.cpp:256]  SetApo Error 1
+[2025-07-02 11:36:54:804][P:9600:15968][ERROR][ColorImageEngineServer.cpp:260]  SetApoComp Error 1
+[2025-07-02 11:36:54:804][P:9600:15968][INFO][ColorImageEngineServer.cpp:268]  SendStartCmd 1
+[2025-07-02 11:36:55:293][P:9600:15968][ERROR][ColorImageEngineServer.cpp:247]  OpenHW Error 11
+[2025-07-02 11:36:55:294][P:9600:15968][ERROR][ColorImageEngineServer.cpp:252]  SetATGC32 Error 1
+[2025-07-02 11:36:55:294][P:9600:15968][ERROR][ColorImageEngineServer.cpp:256]  SetApo Error 1
+[2025-07-02 11:36:55:294][P:9600:15968][ERROR][ColorImageEngineServer.cpp:260]  SetApoComp Error 1
+[2025-07-02 11:36:55:294][P:9600:15968][INFO][ColorImageEngineServer.cpp:268]  SendStartCmd 1
+[2025-07-02 11:36:55:897][P:9600:15968][ERROR][ColorImageEngineServer.cpp:247]  OpenHW Error 11
+[2025-07-02 11:36:55:898][P:9600:15968][ERROR][ColorImageEngineServer.cpp:252]  SetATGC32 Error 1
+[2025-07-02 11:36:55:898][P:9600:15968][ERROR][ColorImageEngineServer.cpp:256]  SetApo Error 1
+[2025-07-02 11:36:55:898][P:9600:15968][ERROR][ColorImageEngineServer.cpp:260]  SetApoComp Error 1
+[2025-07-02 11:36:55:898][P:9600:15968][INFO][ColorImageEngineServer.cpp:268]  SendStartCmd 1
+[2025-07-02 11:36:56:637][P:9600:15968][ERROR][ColorImageEngineServer.cpp:247]  OpenHW Error 11
+[2025-07-02 11:36:56:637][P:9600:15968][ERROR][ColorImageEngineServer.cpp:252]  SetATGC32 Error 1
+[2025-07-02 11:36:56:638][P:9600:15968][ERROR][ColorImageEngineServer.cpp:256]  SetApo Error 1
+[2025-07-02 11:36:56:638][P:9600:15968][ERROR][ColorImageEngineServer.cpp:260]  SetApoComp Error 1
+[2025-07-02 11:36:56:638][P:9600:15968][INFO][ColorImageEngineServer.cpp:268]  SendStartCmd 1
+[2025-07-02 11:36:57:271][P:9600:15968][ERROR][ColorImageEngineServer.cpp:247]  OpenHW Error 11
+[2025-07-02 11:36:57:271][P:9600:15968][ERROR][ColorImageEngineServer.cpp:252]  SetATGC32 Error 1
+[2025-07-02 11:36:57:271][P:9600:15968][ERROR][ColorImageEngineServer.cpp:256]  SetApo Error 1
+[2025-07-02 11:36:57:271][P:9600:15968][ERROR][ColorImageEngineServer.cpp:260]  SetApoComp Error 1
+[2025-07-02 11:36:57:272][P:9600:15968][INFO][ColorImageEngineServer.cpp:268]  SendStartCmd 1
+[2025-07-02 11:37:01:716][P:9600:15968][ERROR][ColorImageEngineServer.cpp:247]  OpenHW Error 11
+[2025-07-02 11:37:01:716][P:9600:15968][ERROR][ColorImageEngineServer.cpp:252]  SetATGC32 Error 1
+[2025-07-02 11:37:01:716][P:9600:15968][ERROR][ColorImageEngineServer.cpp:256]  SetApo Error 1
+[2025-07-02 11:37:01:716][P:9600:15968][ERROR][ColorImageEngineServer.cpp:260]  SetApoComp Error 1
+[2025-07-02 11:37:01:717][P:9600:15968][INFO][ColorImageEngineServer.cpp:268]  SendStartCmd 1
+[2025-07-02 11:39:23:081][P:9600:15968][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 2 ms
+[2025-07-02 11:39:23:116][P:9600:15968][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 2 ms
+[2025-07-02 11:39:50:464][P:23876:11516][INFO][ColorImageEngineServer.cpp:70] ---- ColorImageEngineServer ---- 
+[2025-07-02 11:41:51:472][P:1988:25588][INFO][ColorImageEngineServer.cpp:70] ---- ColorImageEngineServer ---- 
+[2025-07-02 11:42:22:903][P:12676:9900][INFO][ColorImageEngineServer.cpp:70] ---- ColorImageEngineServer ---- 
+[2025-07-02 11:42:50:257][P:3292:20440][INFO][ColorImageEngineServer.cpp:70] ---- ColorImageEngineServer ---- 
+[2025-07-02 11:42:51:055][P:3292:20440][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:510] BuildOpenCL cost time 123 ms
+[2025-07-02 11:42:51:057][P:3292:20440][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 11:42:51:062][P:3292:20440][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 11:42:51:158][P:3292:20440][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 11:42:51:161][P:3292:20440][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 11:42:51:161][P:3292:20440][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 11:42:51:197][P:3292:20440][ERROR][ColorImageEngineServer.cpp:177] Open HW failed : 11
+[2025-07-02 11:42:51:197][P:3292:20440][ERROR][ColorImageEngineServer.cpp:247]  OpenHW Error 11
+[2025-07-02 11:42:51:197][P:3292:20440][ERROR][ColorImageEngineServer.cpp:252]  SetATGC32 Error 1
+[2025-07-02 11:42:51:197][P:3292:20440][ERROR][ColorImageEngineServer.cpp:256]  SetApo Error 1
+[2025-07-02 11:42:51:197][P:3292:20440][ERROR][ColorImageEngineServer.cpp:260]  SetApoComp Error 1
+[2025-07-02 11:42:51:198][P:3292:20440][INFO][ColorImageEngineServer.cpp:268]  SendStartCmd 1
+[2025-07-02 11:44:58:960][P:5224:21736][INFO][ColorImageEngineServer.cpp:70] ---- ColorImageEngineServer ---- 
+[2025-07-02 11:44:59:710][P:5224:21736][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:510] BuildOpenCL cost time 99 ms
+[2025-07-02 11:44:59:711][P:5224:21736][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 11:44:59:716][P:5224:21736][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 2 ms
+[2025-07-02 11:44:59:788][P:5224:21736][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 11:44:59:789][P:5224:21736][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 11:44:59:790][P:5224:21736][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 11:44:59:823][P:5224:21736][ERROR][ColorImageEngineServer.cpp:177] Open HW failed : 11
+[2025-07-02 11:44:59:824][P:5224:21736][ERROR][ColorImageEngineServer.cpp:247]  OpenHW Error 11
+[2025-07-02 11:44:59:824][P:5224:21736][ERROR][ColorImageEngineServer.cpp:252]  SetATGC32 Error 1
+[2025-07-02 11:44:59:824][P:5224:21736][ERROR][ColorImageEngineServer.cpp:256]  SetApo Error 1
+[2025-07-02 11:44:59:824][P:5224:21736][ERROR][ColorImageEngineServer.cpp:260]  SetApoComp Error 1
+[2025-07-02 11:44:59:824][P:5224:21736][INFO][ColorImageEngineServer.cpp:268]  SendStartCmd 1
+[2025-07-02 11:45:01:905][P:5224:21736][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 11:45:01:907][P:5224:21736][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 11:45:01:907][P:5224:21736][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 11:45:01:944][P:5224:21736][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 11:45:01:946][P:5224:21736][ERROR][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1812] Algorithm Set Error : -214
+[2025-07-02 11:45:01:946][P:5224:21736][ERROR][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1902] B_set Depth_level 2; Gain 50.000000; DR 60.000000; SRI_level 5;				 Correlation_level 3; Width 1280; High 960; AD_len 1;				 FrameHeader_len 8; GrayColorMap_level 3; TintMap_level 0;				 TGC_manual[0] 0.000000; TGC_manual[1] 0.000000; TGC_manual[2] 0.000000;				 TGC_manual[3] 0.000000; TGC_manual[4] 0.000000; TGC_manual[5] 0.000000;				 NE_on_off 0; NE_Tx_angle 0 ; NE_line_len 0 
+[2025-07-02 11:45:01:946][P:5224:21736][ERROR][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1919] C_set Depth_level 2; WallFilter_level 1; Gain 50.000000; 				 ColorPriority_level 2;FrameCorrelation_level 2;				 Rx_start 0; Rx_num 12; Rx_idx 0; 				 Rx_len 8; Rx_scan_cross 3; 				 Width 1280; High 960; W_idx 26; W_len 0;				 H_idx 0; H_len 0; Theta 0.000000; 				 phi 0.000000; delta 0.000000; radius 0.000000;r_len 1.000000; 				 FrameHeader_len 8; ColorMap_level 1; 				 Color_mode 0; ColorMap_inversion 0; 
+[2025-07-02 11:45:01:999][P:5224:21736][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 11:45:02:031][P:5224:21736][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 11:45:21:231][P:5224:21736][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 2 ms
+[2025-07-02 11:45:21:265][P:5224:21736][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 2 ms
+[2025-07-02 12:02:08:147][P:25168:14432][INFO][ColorImageEngineServer.cpp:70] ---- ColorImageEngineServer ---- 
+[2025-07-02 12:02:08:857][P:25168:14432][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:510] BuildOpenCL cost time 101 ms
+[2025-07-02 12:02:08:859][P:25168:14432][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 12:02:08:863][P:25168:14432][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 12:02:08:955][P:25168:14432][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 12:02:08:956][P:25168:14432][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 12:02:08:957][P:25168:14432][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 12:02:08:961][P:25168:14432][ERROR][ColorImageEngineServer.cpp:177] Open HW failed : 11
+[2025-07-02 12:02:08:962][P:25168:14432][ERROR][ColorImageEngineServer.cpp:247]  OpenHW Error 11
+[2025-07-02 12:02:08:962][P:25168:14432][ERROR][ColorImageEngineServer.cpp:252]  SetATGC32 Error 1
+[2025-07-02 12:02:08:962][P:25168:14432][ERROR][ColorImageEngineServer.cpp:256]  SetApo Error 1
+[2025-07-02 12:02:08:962][P:25168:14432][ERROR][ColorImageEngineServer.cpp:260]  SetApoComp Error 1
+[2025-07-02 12:02:08:962][P:25168:14432][INFO][ColorImageEngineServer.cpp:268]  SendStartCmd 1
+[2025-07-02 12:02:10:672][P:25168:14432][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 12:02:10:674][P:25168:14432][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 12:02:10:674][P:25168:14432][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 12:02:10:682][P:25168:14432][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 12:02:10:682][P:25168:14432][ERROR][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1812] Algorithm Set Error : -214
+[2025-07-02 12:02:10:682][P:25168:14432][ERROR][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1902] B_set Depth_level 2; Gain 50.000000; DR 60.000000; SRI_level 5;				 Correlation_level 3; Width 1280; High 960; AD_len 1;				 FrameHeader_len 8; GrayColorMap_level 3; TintMap_level 0;				 TGC_manual[0] 0.000000; TGC_manual[1] 0.000000; TGC_manual[2] 0.000000;				 TGC_manual[3] 0.000000; TGC_manual[4] 0.000000; TGC_manual[5] 0.000000;				 NE_on_off 0; NE_Tx_angle 0 ; NE_line_len 0 
+[2025-07-02 12:02:10:682][P:25168:14432][ERROR][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1919] C_set Depth_level 2; WallFilter_level 1; Gain 50.000000; 				 ColorPriority_level 2;FrameCorrelation_level 2;				 Rx_start 0; Rx_num 12; Rx_idx 0; 				 Rx_len 8; Rx_scan_cross 3; 				 Width 1280; High 960; W_idx 26; W_len 0;				 H_idx 0; H_len 0; Theta 0.000000; 				 phi 0.000000; delta 0.000000; radius 0.000000;r_len 1.000000; 				 FrameHeader_len 8; ColorMap_level 1; 				 Color_mode 0; ColorMap_inversion 0; 
+[2025-07-02 12:02:10:704][P:25168:14432][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 12:02:10:706][P:25168:14432][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 12:02:13:978][P:25168:14432][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 12:02:13:981][P:25168:14432][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 12:41:58:518][P:22552:13800][INFO][ColorImageEngineServer.cpp:70] ---- ColorImageEngineServer ---- 
+[2025-07-02 12:41:59:332][P:22552:13800][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:510] BuildOpenCL cost time 112 ms
+[2025-07-02 12:41:59:335][P:22552:13800][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 12:41:59:339][P:22552:13800][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 12:41:59:410][P:22552:13800][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 12:41:59:411][P:22552:13800][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 12:41:59:412][P:22552:13800][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 12:41:59:451][P:22552:13800][ERROR][ColorImageEngineServer.cpp:177] Open HW failed : 11
+[2025-07-02 12:41:59:452][P:22552:13800][ERROR][ColorImageEngineServer.cpp:247]  OpenHW Error 11
+[2025-07-02 12:41:59:452][P:22552:13800][ERROR][ColorImageEngineServer.cpp:252]  SetATGC32 Error 1
+[2025-07-02 12:41:59:452][P:22552:13800][ERROR][ColorImageEngineServer.cpp:256]  SetApo Error 1
+[2025-07-02 12:41:59:452][P:22552:13800][ERROR][ColorImageEngineServer.cpp:260]  SetApoComp Error 1
+[2025-07-02 12:41:59:452][P:22552:13800][INFO][ColorImageEngineServer.cpp:268]  SendStartCmd 1
+[2025-07-02 12:46:38:839][P:19096:25636][INFO][ColorImageEngineServer.cpp:70] ---- ColorImageEngineServer ---- 
+[2025-07-02 12:46:39:645][P:19096:25636][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:510] BuildOpenCL cost time 106 ms
+[2025-07-02 12:46:39:647][P:19096:25636][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 12:46:39:650][P:19096:25636][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 12:46:39:737][P:19096:25636][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 12:46:39:739][P:19096:25636][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 12:46:39:739][P:19096:25636][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 12:46:39:773][P:19096:25636][ERROR][ColorImageEngineServer.cpp:177] Open HW failed : 11
+[2025-07-02 12:46:39:773][P:19096:25636][ERROR][ColorImageEngineServer.cpp:247]  OpenHW Error 11
+[2025-07-02 12:46:39:773][P:19096:25636][ERROR][ColorImageEngineServer.cpp:252]  SetATGC32 Error 1
+[2025-07-02 12:46:39:775][P:19096:25636][ERROR][ColorImageEngineServer.cpp:256]  SetApo Error 1
+[2025-07-02 12:46:39:775][P:19096:25636][ERROR][ColorImageEngineServer.cpp:260]  SetApoComp Error 1
+[2025-07-02 12:46:39:775][P:19096:25636][INFO][ColorImageEngineServer.cpp:268]  SendStartCmd 1
+[2025-07-02 12:46:51:755][P:26848:3904][INFO][ColorImageEngineServer.cpp:70] ---- ColorImageEngineServer ---- 
+[2025-07-02 12:46:52:601][P:26848:3904][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:510] BuildOpenCL cost time 220 ms
+[2025-07-02 12:46:52:603][P:26848:3904][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 12:46:52:607][P:26848:3904][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 2 ms
+[2025-07-02 12:46:52:693][P:26848:3904][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 12:46:52:694][P:26848:3904][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 12:46:52:695][P:26848:3904][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 12:46:52:729][P:26848:3904][ERROR][ColorImageEngineServer.cpp:177] Open HW failed : 11
+[2025-07-02 12:46:52:729][P:26848:3904][ERROR][ColorImageEngineServer.cpp:247]  OpenHW Error 11
+[2025-07-02 12:46:52:729][P:26848:3904][ERROR][ColorImageEngineServer.cpp:252]  SetATGC32 Error 1
+[2025-07-02 12:46:52:729][P:26848:3904][ERROR][ColorImageEngineServer.cpp:256]  SetApo Error 1
+[2025-07-02 12:46:52:730][P:26848:3904][ERROR][ColorImageEngineServer.cpp:260]  SetApoComp Error 1
+[2025-07-02 12:46:52:730][P:26848:3904][INFO][ColorImageEngineServer.cpp:268]  SendStartCmd 1
+[2025-07-02 12:46:55:177][P:26848:3904][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 12:46:55:179][P:26848:3904][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 12:46:55:179][P:26848:3904][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 12:57:29:704][P:11164:22316][INFO][ColorImageEngineServer.cpp:70] ---- ColorImageEngineServer ---- 
+[2025-07-02 12:57:30:456][P:11164:22316][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:510] BuildOpenCL cost time 94 ms
+[2025-07-02 12:57:30:458][P:11164:22316][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 12:57:30:463][P:11164:22316][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 12:57:30:543][P:11164:22316][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 12:57:30:545][P:11164:22316][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 12:57:30:546][P:11164:22316][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 12:57:30:578][P:11164:22316][ERROR][ColorImageEngineServer.cpp:177] Open HW failed : 11
+[2025-07-02 12:57:30:578][P:11164:22316][ERROR][ColorImageEngineServer.cpp:247]  OpenHW Error 11
+[2025-07-02 12:57:30:578][P:11164:22316][ERROR][ColorImageEngineServer.cpp:252]  SetATGC32 Error 1
+[2025-07-02 12:57:30:578][P:11164:22316][ERROR][ColorImageEngineServer.cpp:256]  SetApo Error 1
+[2025-07-02 12:57:30:579][P:11164:22316][ERROR][ColorImageEngineServer.cpp:260]  SetApoComp Error 1
+[2025-07-02 12:57:30:579][P:11164:22316][INFO][ColorImageEngineServer.cpp:268]  SendStartCmd 1
+[2025-07-02 12:57:32:927][P:11164:22316][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 1 ms
+[2025-07-02 12:57:32:929][P:11164:22316][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1981] m_pPW->InitParam cost time 0 ms
+[2025-07-02 12:57:32:929][P:11164:22316][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 12:57:32:971][P:11164:22316][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 12:57:32:971][P:11164:22316][ERROR][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1812] Algorithm Set Error : -214
+[2025-07-02 12:57:32:971][P:11164:22316][ERROR][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1902] B_set Depth_level 2; Gain 50.000000; DR 60.000000; SRI_level 5;				 Correlation_level 3; Width 1280; High 960; AD_len 1;				 FrameHeader_len 8; GrayColorMap_level 3; TintMap_level 0;				 TGC_manual[0] 0.000000; TGC_manual[1] 0.000000; TGC_manual[2] 0.000000;				 TGC_manual[3] 0.000000; TGC_manual[4] 0.000000; TGC_manual[5] 0.000000;				 NE_on_off 0; NE_Tx_angle 0 ; NE_line_len 0 
+[2025-07-02 12:57:32:971][P:11164:22316][ERROR][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1919] C_set Depth_level 2; WallFilter_level 1; Gain 50.000000; 				 ColorPriority_level 2;FrameCorrelation_level 2;				 Rx_start 0; Rx_num 12; Rx_idx 0; 				 Rx_len 8; Rx_scan_cross 3; 				 Width 1280; High 960; W_idx 26; W_len 0;				 H_idx 0; H_len 0; Theta 0.000000; 				 phi 0.000000; delta 0.000000; radius 0.000000;r_len 1.000000; 				 FrameHeader_len 8; ColorMap_level 1; 				 Color_mode 0; ColorMap_inversion 0; 
+[2025-07-02 12:57:33:023][P:11164:22316][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 2 ms
+[2025-07-02 12:57:33:055][P:11164:22316][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 12:57:39:161][P:11164:22316][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
+[2025-07-02 12:57:39:192][P:11164:22316][INFO][DataProcessAlgorithm\UltrasoundImagingProcessAlgorithm.cpp:1809] Set cost time 0 ms
